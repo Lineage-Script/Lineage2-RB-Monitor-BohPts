@@ -1,6 +1,6 @@
 # Yura RB Monitor
 
-Lineage II Raid Boss Monitor with OBS/OCR chat detection, respawn timers, launcher licensing and shared online RB map.
+Lineage II Raid Boss Monitor with OBS/OCR chat detection, respawn timers, launcher licensing, in-game overlay and shared online RB map.
 
 ## Download
 
@@ -12,10 +12,19 @@ https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMon
 
 - OBS/OCR chat detection
 - Raid Boss respawn timers
+- In-game overlay
 - Shared online RB map
-- Launcher with trial/paid license activation
-- Search and focus boss points on the map
+- Trial and license key activation
+- Search and temporary RB point preview
 
-## Disclaimer
+## Installation
 
-Yura RB Monitor does not control your character, does not automate farming and does not modify the game client. Use according to the rules of your server.
+1. Download the ZIP from Releases.
+2. Extract the full folder.
+3. Run `YuraRB_Launcher.exe`.
+4. Activate trial or enter your license key.
+5. Configure OBS capture and overlay zone.
+
+## Notice
+
+Use this software according to the rules of your Lineage II server. Yura RB Monitor does not control the character or automate gameplay; it reads visible chat through OBS/OCR and displays timers.
