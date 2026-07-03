@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yuzumaki55-spec.github.io/RB-Monitor/sitemap.xml

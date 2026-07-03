@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yura RB Monitor — Lineage II Raid Boss Timer & Online Map</title>
+  <meta name="description" content="Yura RB Monitor is a Lineage II Raid Boss monitor with OBS/OCR chat detection, respawn timers, launcher licensing and a shared online RB map." />
+  <meta name="keywords" content="Lineage 2 RB timer, Lineage II raid boss monitor, L2 raid boss map, Lineage 2 High Five raid boss timer, L2 boss respawn tracker, Lineage 2 OCR raid boss timer, таймер РБ Lineage 2, карта РБ Lineage 2" />
+  <meta name="author" content="Yura RB Monitor" />
+  <meta property="og:title" content="Yura RB Monitor — Lineage II Raid Boss Timer" />
+  <meta property="og:description" content="OBS/OCR Raid Boss detection, shared online RB map and respawn timers for Lineage II." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/map.svg" />
+  <meta name="theme-color" content="#05070c" />
+  <style>
+    :root{
+      --bg:#05070c; --panel:rgba(9,13,22,.78); --panel2:rgba(11,18,30,.92);
+      --line:rgba(117,229,255,.18); --text:#eaf7ff; --muted:#92a8bb;
+      --cyan:#20e6ff; --mint:#42ffc8; --gold:#ffd166; --red:#ff4d4d;
+      --shadow:0 28px 90px rgba(0,0,0,.55);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0; color:var(--text); font-family:Inter,Segoe UI,system-ui,Arial,sans-serif; background:radial-gradient(circle at 20% 15%,rgba(32,230,255,.17),transparent 28%),radial-gradient(circle at 80% 8%,rgba(255,209,102,.12),transparent 25%),linear-gradient(180deg,#060913,#02040a 60%,#05070c); overflow-x:hidden}
+    body:before{content:""; position:fixed; inset:0; pointer-events:none; background:linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size:44px 44px; opacity:.18; z-index:-1}
+    a{color:inherit; text-decoration:none}.wrap{width:min(1180px,calc(100% - 32px)); margin:0 auto}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(5,7,12,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav-inner{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:950;letter-spacing:.03em}.logo{width:42px;height:42px;border-radius:13px;background:radial-gradient(circle,var(--mint),var(--cyan));box-shadow:0 0 26px rgba(32,230,255,.36);display:grid;place-items:center;color:#031016;font-weight:950}.links{display:flex;gap:18px;color:var(--muted);font-weight:800;font-size:14px}.links a:hover{color:var(--mint)}
+    .hero{padding:82px 0 54px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}.tag{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(66,255,200,.22);background:rgba(66,255,200,.08);color:var(--mint);border-radius:999px;padding:8px 12px;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+    h1{font-size:clamp(38px,6vw,72px);line-height:.96;margin:18px 0 18px;letter-spacing:-.045em}.accent{color:var(--gold);text-shadow:0 0 28px rgba(255,209,102,.18)}
+    .lead{font-size:18px;line-height:1.7;color:rgba(234,247,255,.82);max-width:650px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin:30px 0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 18px;border-radius:15px;font-weight:950;border:1px solid rgba(255,255,255,.12);transition:.18s transform,.18s border,.18s box-shadow}.btn:hover{transform:translateY(-2px)}.btn-primary{background:linear-gradient(135deg,var(--mint),var(--cyan));color:#041016;border-color:transparent;box-shadow:0 18px 48px rgba(32,230,255,.22)}.btn-ghost{background:rgba(255,255,255,.045);color:var(--text)}.btn-gold{background:linear-gradient(135deg,var(--gold),#ff9f1c);color:#1d1100;border-color:transparent}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.stat{border:1px solid var(--line);background:rgba(255,255,255,.04);padding:16px;border-radius:18px}.stat strong{display:block;font-size:24px;color:var(--mint)}.stat span{color:var(--muted);font-weight:800;font-size:13px}
+    .showcase{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));border:1px solid var(--line);border-radius:26px;padding:12px;box-shadow:var(--shadow);position:relative}.showcase:after{content:"LIVE MAP";position:absolute;right:24px;top:22px;background:rgba(0,0,0,.55);border:1px solid rgba(66,255,200,.28);color:var(--mint);padding:8px 10px;border-radius:999px;font-size:12px;font-weight:950;letter-spacing:.08em}.showcase img{width:100%;display:block;border-radius:19px;border:1px solid rgba(255,255,255,.08)}
+    section{padding:56px 0}.section-title{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:24px}.section-title h2{font-size:34px;margin:0;letter-spacing:-.03em}.section-title p{margin:0;color:var(--muted);max-width:560px;line-height:1.6}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 18px 50px rgba(0,0,0,.22)}.icon{width:44px;height:44px;border-radius:14px;background:rgba(32,230,255,.12);display:grid;place-items:center;color:var(--cyan);font-size:22px;margin-bottom:14px}.card h3{margin:0 0 10px;font-size:18px}.card p{margin:0;color:rgba(234,247,255,.72);line-height:1.65}
+    .shots{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.shot{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:22px;padding:10px}.shot img{width:100%;display:block;border-radius:16px;border:1px solid rgba(255,255,255,.08)}.shot b{display:block;padding:12px 8px 2px}.shot span{display:block;color:var(--muted);padding:0 8px 10px;font-size:14px}
+    .steps{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{counter-increment:step;background:var(--panel2);border:1px solid var(--line);border-radius:20px;padding:18px}.step:before{content:counter(step);display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--gold);color:#1b1000;font-weight:950;margin-bottom:12px}.step h3{margin:0 0 8px}.step p{margin:0;color:var(--muted);line-height:1.55;font-size:14px}
+    .pricing{display:grid;grid-template-columns:1fr 1fr;gap:16px}.price{padding:26px;border-radius:26px;border:1px solid rgba(255,209,102,.28);background:linear-gradient(180deg,rgba(255,209,102,.09),rgba(255,255,255,.035));box-shadow:var(--shadow)}.price h3{font-size:24px;margin:0 0 8px}.price p{color:var(--muted);line-height:1.7}.price ul{line-height:2;color:rgba(234,247,255,.85);padding-left:20px}
+    .notice{border:1px solid rgba(255,209,102,.28);background:rgba(255,209,102,.08);border-radius:18px;padding:16px;color:rgba(255,244,208,.9);line-height:1.65}.footer{padding:36px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
+    @media(max-width:900px){.hero-grid,.pricing{grid-template-columns:1fr}.cards,.steps{grid-template-columns:1fr 1fr}.links{display:none}.stats{grid-template-columns:1fr}.shots{grid-template-columns:1fr}}@media(max-width:560px){.cards,.steps{grid-template-columns:1fr}.hero{padding-top:48px}.btn{width:100%}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="wrap nav-inner"><a class="brand" href="#top"><span class="logo">RB</span><span>Yura RB Monitor</span></a><div class="links"><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#download">Download</a><a href="#license">License</a></div></div></nav>
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="tag">Lineage II • Raid Boss Timer</span>
+          <h1>Yura RB Monitor<br><span class="accent">OCR timer & online RB map</span></h1>
+          <p class="lead">A lightweight tool for Lineage II players: OBS/OCR chat detection, Raid Boss respawn timers, shared online map, launcher and license activation.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.0.zip">⬇ Download client</a>
+            <a class="btn btn-gold" href="#license">🔑 Buy license</a>
+            <a class="btn btn-ghost" href="#setup">⚙ Setup guide</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>OCR</strong><span>OBS chat detection</span></div>
+            <div class="stat"><strong>Map</strong><span>shared online timers</span></div>
+            <div class="stat"><strong>Trial</strong><span>license system ready</span></div>
+          </div>
+        </div>
+        <div class="showcase"><img src="images/map.svg" alt="Yura RB Monitor online map screenshot"></div>
+      </div>
+    </section>
+    <section id="features" class="wrap">
+      <div class="section-title"><h2>What it does</h2><p>Designed for quick Raid Boss monitoring without controlling your character or modifying the game client.</p></div>
+      <div class="cards">
+        <div class="card"><div class="icon">👁</div><h3>OBS/OCR detection</h3><p>Reads visible system chat through OBS screenshots and detects Raid Boss messages.</p></div>
+        <div class="card"><div class="icon">⏱</div><h3>Respawn timers</h3><p>Starts a timer when a boss appears in chat and keeps it visible in the overlay.</p></div>
+        <div class="card"><div class="icon">🗺</div><h3>Online RB map</h3><p>Shows only active timer bosses by default. Search and “show all RB” modes help locate spots.</p></div>
+        <div class="card"><div class="icon">🌐</div><h3>Shared data</h3><p>If one user detects a boss, all users with the map can see the active timer.</p></div>
+        <div class="card"><div class="icon">🔐</div><h3>License launcher</h3><p>Trial and paid key activation are handled by the Yura RB launcher and license server.</p></div>
+        <div class="card"><div class="icon">🧭</div><h3>Search & focus</h3><p>Search RB by English or Russian name and focus the map on the boss location.</p></div>
+      </div>
+    </section>
+    <section id="screenshots" class="wrap">
+      <div class="section-title"><h2>Screenshots</h2><p>Replace these demo images with real screenshots from your launcher, map and overlay.</p></div>
+      <div class="shots">
+        <div class="shot"><img src="images/launcher.svg" alt="Launcher screenshot"><b>Launcher</b><span>Activation, launch buttons and map access.</span></div>
+        <div class="shot"><img src="images/overlay.svg" alt="Overlay screenshot"><b>Game overlay</b><span>Active Raid Boss timers on top of the screen.</span></div>
+        <div class="shot"><img src="images/timers.svg" alt="Timer panel screenshot"><b>Active timers</b><span>Yellow = respawn timer, green = alive.</span></div>
+        <div class="shot"><img src="images/map.svg" alt="Map screenshot"><b>Online map</b><span>Shared boss map for all users.</span></div>
+      </div>
+    </section>
+    <section id="setup" class="wrap">
+      <div class="section-title"><h2>Quick setup</h2><p>Basic client flow. Detailed OBS setup can be added later.</p></div>
+      <div class="steps">
+        <div class="step"><h3>Download</h3><p>Download the ZIP from the latest release and unpack it into a separate folder.</p></div>
+        <div class="step"><h3>Launch</h3><p>Start <b>YuraRB_Launcher.exe</b>. Do not run the monitor EXE alone.</p></div>
+        <div class="step"><h3>Activate</h3><p>Use trial mode or enter your paid license key.</p></div>
+        <div class="step"><h3>Play</h3><p>Run OBS capture and start the monitor. Detected bosses will appear on the map.</p></div>
+      </div>
+    </section>
+    <section id="download" class="wrap">
+      <div class="pricing">
+        <div class="price">
+          <h3>Download client</h3>
+          <p>Current public build: <b>v1.0.0.0</b></p>
+          <ul><li>Launcher included</li><li>Monitor included</li><li>Online map access through license</li><li>Trial support</li></ul>
+          <a class="btn btn-primary" href="https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.0.zip">Download ZIP</a>
+        </div>
+        <div id="license" class="price">
+          <h3>License</h3>
+          <p>Paid keys are issued manually at the start. Contact the author to buy or test a key.</p>
+          <ul><li>Trial key available</li><li>Paid license activation</li><li>HWID protection</li><li>Support through Telegram/Discord</li></ul>
+          <a class="btn btn-gold" href="https://t.me/bohpts">Buy license / Contact</a>
+        </div>
+      </div>
+    </section>
+    <section class="wrap"><div class="notice"><b>Disclaimer:</b> Yura RB Monitor does not control your character, does not automate farming and does not modify the game client. It reads visible chat through OBS/OCR and displays timers. Use it according to the rules of your server.</div></section>
+  </main>
+  <footer class="footer"><div class="wrap">© 2026 Yura RB Monitor. Lineage II is a trademark of its respective owners. This project is an independent fan-made utility.</div></footer>
+</body>
+</html>
