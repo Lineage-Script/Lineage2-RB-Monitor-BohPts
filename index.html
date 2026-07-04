@@ -1,17 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yura RB Monitor — Lineage II Raid Boss Timer & Online Map</title>
-  <meta name="description" content="Yura RB Monitor is a Lineage II Raid Boss monitor with OBS/OCR chat detection, respawn timers, launcher licensing, overlay and shared online RB map.">
-  <meta name="keywords" content="Lineage 2 RB timer, Lineage II raid boss monitor, L2 raid boss map, Lineage 2 High Five raid boss timer, L2 boss respawn tracker, Lineage 2 OCR raid boss timer, Lineage 2 таймер РБ, карта РБ Lineage 2, монитор РБ Lineage 2">
+  <title>Yura RB Monitor — таймер рейдових босів Lineage II та онлайн-карта РБ</title>
+
+  <meta name="description" content="Yura RB Monitor — монітор рейдових босів Lineage II з OBS/OCR зчитуванням чату, таймерами респу, оверлеєм, ліцензією та спільною онлайн-картою РБ.">
+  <meta name="keywords" content="Lineage 2 таймер РБ, Lineage II рейд бос таймер, карта РБ Lineage 2, монитор РБ Lineage 2, L2 RB map, Lineage II raid boss monitor, High Five RB timer, OBS OCR Lineage 2, таймер рейдових босів">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Yura RB Monitor — Lineage II Raid Boss Timer">
-  <meta property="og:description" content="OBS/OCR chat detection, RB respawn timers, overlay and shared online map for Lineage II.">
+
+  <meta property="og:title" content="Yura RB Monitor — таймер РБ Lineage II">
+  <meta property="og:description" content="OBS/OCR зчитування чату, таймери респу РБ, оверлей і спільна онлайн-карта для Lineage II.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/launcher.png">
+
   <meta name="theme-color" content="#d99b2b">
+
   <style>
     :root{
       --bg:#050507;
@@ -27,7 +31,11 @@
       --red:#ff6f61;
       --shadow:0 20px 90px rgba(0,0,0,.55);
     }
-    *{box-sizing:border-box}
+
+    *{
+      box-sizing:border-box;
+    }
+
     body{
       margin:0;
       background:
@@ -38,88 +46,296 @@
       font-family:Inter,Segoe UI,Arial,sans-serif;
       line-height:1.55;
     }
+
     body:before{
       content:"";
-      position:fixed; inset:0; pointer-events:none; opacity:.22;
-      background-image:linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-                       linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.22;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
       background-size:48px 48px;
       mask-image:linear-gradient(180deg,#000,transparent 78%);
     }
-    a{color:var(--gold2); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1180px; margin:auto; padding:0 22px}
+
+    a{
+      color:var(--gold2);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    .wrap{
+      max-width:1180px;
+      margin:auto;
+      padding:0 22px;
+    }
+
     header{
-      position:sticky; top:0; z-index:5;
+      position:sticky;
+      top:0;
+      z-index:5;
       background:rgba(5,5,7,.78);
       backdrop-filter:blur(14px);
       border-bottom:1px solid rgba(217,155,43,.18);
     }
-    .nav{display:flex; align-items:center; justify-content:space-between; gap:18px; padding:14px 0}
-    .brand{font-weight:900; letter-spacing:.08em; color:var(--gold2)}
-    .navlinks{display:flex; gap:18px; flex-wrap:wrap; font-size:14px}
-    .hero{padding:74px 0 42px}
-    .hero-grid{display:grid; grid-template-columns:1.02fr .98fr; gap:34px; align-items:center}
-    .badge{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:7px 11px; border:1px solid var(--line); border-radius:999px;
-      background:rgba(217,155,43,.08); color:var(--gold2); font-weight:800; font-size:13px
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:14px 0;
     }
+
+    .brand{
+      font-weight:900;
+      letter-spacing:.08em;
+      color:var(--gold2);
+      white-space:nowrap;
+    }
+
+    .navlinks{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      font-size:14px;
+      align-items:center;
+    }
+
+    .lang-link{
+      padding:3px 8px;
+      border:1px solid rgba(217,155,43,.35);
+      border-radius:8px;
+      color:var(--gold2);
+      font-weight:800;
+      background:rgba(217,155,43,.07);
+    }
+
+    .hero{
+      padding:74px 0 42px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:34px;
+      align-items:center;
+    }
+
+    .badge{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:7px 11px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(217,155,43,.08);
+      color:var(--gold2);
+      font-weight:800;
+      font-size:13px;
+    }
+
     h1{
       font-size:clamp(36px,5vw,66px);
       line-height:1.02;
       margin:18px 0 16px;
       letter-spacing:-.04em;
     }
-    .lead{font-size:18px; color:#ded4bf; max-width:720px}
-    .actions{display:flex; gap:12px; flex-wrap:wrap; margin:28px 0}
+
+    .lead{
+      font-size:18px;
+      color:#ded4bf;
+      max-width:720px;
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:28px 0;
+    }
+
     .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      min-height:46px; padding:12px 18px; border-radius:12px;
-      border:1px solid var(--line); font-weight:900;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:46px;
+      padding:12px 18px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      font-weight:900;
       background:rgba(217,155,43,.10);
       box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
     }
-    .btn.primary{background:linear-gradient(135deg,#c77b1f,#ffcf70); color:#171008; border:none}
-    .btn.dark{background:rgba(255,255,255,.045); color:var(--text)}
+
+    .btn.primary{
+      background:linear-gradient(135deg,#c77b1f,#ffcf70);
+      color:#171008;
+      border:none;
+    }
+
+    .btn.dark{
+      background:rgba(255,255,255,.045);
+      color:var(--text);
+    }
+
     .hero-card{
       border:1px solid var(--line);
-      border-radius:22px; overflow:hidden; background:var(--panel);
+      border-radius:22px;
+      overflow:hidden;
+      background:var(--panel);
       box-shadow:var(--shadow);
     }
-    .hero-card img{display:block; width:100%; height:auto}
-    section{padding:42px 0}
-    .section-title{font-size:34px; margin:0 0 12px}
-    .section-sub{color:var(--muted); margin:0 0 24px}
-    .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-    .card{
-      padding:20px; border:1px solid rgba(217,155,43,.22);
-      border-radius:18px; background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));
+
+    .hero-card img{
+      display:block;
+      width:100%;
+      height:auto;
     }
-    .card h3{margin:0 0 8px; color:var(--gold2)}
-    .card p{margin:0; color:#d6cab4}
-    .screens{display:grid; grid-template-columns:1fr; gap:22px}
-    figure{margin:0; border:1px solid var(--line); border-radius:22px; overflow:hidden; background:#090909; box-shadow:var(--shadow)}
-    figure img{width:100%; display:block}
-    figcaption{padding:14px 16px; color:#dfd2bd; border-top:1px solid rgba(217,155,43,.18); background:rgba(0,0,0,.35)}
-    .steps{counter-reset:item; display:grid; gap:12px}
-    .step{display:grid; grid-template-columns:44px 1fr; gap:14px; align-items:start; padding:16px; border:1px solid rgba(217,155,43,.22); border-radius:16px; background:rgba(255,255,255,.035)}
-    .step:before{counter-increment:item; content:counter(item); width:36px; height:36px; display:grid; place-items:center; border-radius:50%; background:rgba(217,155,43,.18); color:var(--gold2); font-weight:900; border:1px solid var(--line)}
-    .warning{padding:18px; border:1px solid rgba(255,111,97,.35); border-radius:16px; background:rgba(255,111,97,.08); color:#ffddd8}
-    footer{padding:38px 0; color:var(--muted); border-top:1px solid rgba(217,155,43,.18)}
-    @media(max-width:900px){.hero-grid,.cards{grid-template-columns:1fr}.nav{align-items:flex-start; flex-direction:column}}
+
+    section{
+      padding:42px 0;
+    }
+
+    .section-title{
+      font-size:34px;
+      margin:0 0 12px;
+    }
+
+    .section-sub{
+      color:var(--muted);
+      margin:0 0 24px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .card{
+      padding:20px;
+      border:1px solid rgba(217,155,43,.22);
+      border-radius:18px;
+      background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));
+    }
+
+    .card h3{
+      margin:0 0 8px;
+      color:var(--gold2);
+    }
+
+    .card p{
+      margin:0;
+      color:#d6cab4;
+    }
+
+    .screens{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:22px;
+    }
+
+    figure{
+      margin:0;
+      border:1px solid var(--line);
+      border-radius:22px;
+      overflow:hidden;
+      background:#090909;
+      box-shadow:var(--shadow);
+    }
+
+    figure img{
+      width:100%;
+      display:block;
+    }
+
+    figcaption{
+      padding:14px 16px;
+      color:#dfd2bd;
+      border-top:1px solid rgba(217,155,43,.18);
+      background:rgba(0,0,0,.35);
+    }
+
+    .steps{
+      counter-reset:item;
+      display:grid;
+      gap:12px;
+    }
+
+    .step{
+      display:grid;
+      grid-template-columns:44px 1fr;
+      gap:14px;
+      align-items:start;
+      padding:16px;
+      border:1px solid rgba(217,155,43,.22);
+      border-radius:16px;
+      background:rgba(255,255,255,.035);
+    }
+
+    .step:before{
+      counter-increment:item;
+      content:counter(item);
+      width:36px;
+      height:36px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:rgba(217,155,43,.18);
+      color:var(--gold2);
+      font-weight:900;
+      border:1px solid var(--line);
+    }
+
+    .warning{
+      padding:18px;
+      border:1px solid rgba(255,111,97,.35);
+      border-radius:16px;
+      background:rgba(255,111,97,.08);
+      color:#ffddd8;
+    }
+
+    footer{
+      padding:38px 0;
+      color:var(--muted);
+      border-top:1px solid rgba(217,155,43,.18);
+    }
+
+    @media(max-width:900px){
+      .hero-grid,
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      .nav{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+    }
   </style>
 </head>
+
 <body>
 <header>
   <div class="wrap nav">
     <div class="brand">Yura RB Monitor</div>
+
     <nav class="navlinks">
-      <a href="#features">Features</a>
-      <a href="#screenshots">Screenshots</a>
-      <a href="#install">Install</a>
-      <a href="#license">License</a>
-      <a href="#download">Download</a>
+      <a href="#features">Особливості</a>
+      <a href="#screenshots">Знімки екрана</a>
+      <a href="#install">Встановити</a>
+      <a href="#license">Ліцензія</a>
+      <a href="#download">Завантажити</a>
+      <a class="lang-link" href="index.html">UA</a>
+      <a class="lang-link" href="ru.html">RU</a>
+      <a class="lang-link" href="en.html">EN</a>
     </nav>
   </div>
 </header>
@@ -128,54 +344,86 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="badge">Lineage II • OBS/OCR • Online RB Map</span>
-        <h1>Raid Boss timers and shared online map for Lineage II.</h1>
+        <span class="badge">Lineage II • OBS/OCR • Онлайн-карта РБ</span>
+
+        <h1>Таймери рейдових босів та спільна онлайн-карта для Lineage II.</h1>
+
         <p class="lead">
-          Yura RB Monitor reads visible system chat through OBS/OCR, detects Raid Boss messages,
-          starts respawn timers, shows an in-game overlay and synchronizes active RB timers on a shared online map.
+          Yura RB Monitor зчитує видимий системний чат через OBS/OCR, знаходить повідомлення
+          про рейдових босів, запускає таймери респу, показує внутрішньоігровий оверлей
+          і синхронізує активні таймери РБ на спільній онлайн-карті.
         </p>
+
         <div class="actions" id="download">
-          <a class="btn primary" href="https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.1.zip">Download client ZIP</a>
-          <a class="btn dark" href="https://t.me/bohpts">Buy license / Telegram</a>
+          <a class="btn primary" href="https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.1.zip">
+            Завантажити ZIP-файл клієнта
+          </a>
+
+          <a class="btn dark" href="https://t.me/YuraRBMonitorBot">
+            Купити ліцензію / Telegram
+          </a>
         </div>
+
         <p style="color:var(--muted);font-size:14px">
-          Trial and paid license keys are handled by the launcher. The client is distributed as a Windows ZIP package.
+          Пробні та платні ліцензійні ключі обробляються через лаунчер.
+          Клієнт розповсюджується як ZIP-архів для Windows.
         </p>
       </div>
+
       <div class="hero-card">
-        <img src="images/launcher.png" alt="Yura RB Monitor launcher interface">
+        <img src="images/launcher.png" alt="Інтерфейс лаунчера Yura RB Monitor">
       </div>
     </div>
   </section>
 
   <section id="features">
     <div class="wrap">
-      <h2 class="section-title">What it does</h2>
-      <p class="section-sub">Built for Lineage II Raid Boss monitoring with shared timers for clan or party usage.</p>
+      <h2 class="section-title">Що робить програма</h2>
+      <p class="section-sub">
+        Інструмент для моніторингу рейдових босів Lineage II зі спільними таймерами для клану, групи або сервера.
+      </p>
+
       <div class="cards">
         <div class="card">
-          <h3>OBS/OCR chat detection</h3>
-          <p>Reads the configured chat capture zone and detects RB respawn messages without controlling your character.</p>
+          <h3>OBS/OCR зчитування чату</h3>
+          <p>
+            Програма читає налаштовану область чату через OBS і розпізнає повідомлення про респ РБ без керування персонажем.
+          </p>
         </div>
+
         <div class="card">
-          <h3>In-game overlay</h3>
-          <p>Shows active RB timers directly over the game window with configurable position, color and scale.</p>
+          <h3>Оверлей поверх гри</h3>
+          <p>
+            Активні таймери РБ показуються поверх ігрового вікна. Можна налаштувати позицію, колір, масштаб і розмір.
+          </p>
         </div>
+
         <div class="card">
-          <h3>Shared online map</h3>
-          <p>When one user detects a boss, every opened map can see the same active timer and boss marker.</p>
+          <h3>Спільна онлайн-карта</h3>
+          <p>
+            Якщо один користувач побачив повідомлення про РБ, активний таймер може бачити вся карта онлайн.
+          </p>
         </div>
+
         <div class="card">
-          <h3>Launcher licensing</h3>
-          <p>Trial activation, license keys, status checks and a clean launcher UI for normal users.</p>
+          <h3>Ліцензія через лаунчер</h3>
+          <p>
+            Пробний доступ, платні ключі, перевірка статусу ліцензії та запуск програми через зручний лаунчер.
+          </p>
         </div>
+
         <div class="card">
-          <h3>Search and preview</h3>
-          <p>Search an RB to quickly preview its location; active timers remain visible globally.</p>
+          <h3>Пошук і попередній перегляд</h3>
+          <p>
+            Можна швидко знайти РБ на карті, переглянути його місце і бачити тільки активні глобальні таймери.
+          </p>
         </div>
+
         <div class="card">
-          <h3>High Five RB workflow</h3>
-          <p>Designed around Lineage II RB messages, respawn timers and practical map navigation.</p>
+          <h3>Під High Five RB workflow</h3>
+          <p>
+            Логіка створена під повідомлення Lineage II, таймери респу РБ і практичну навігацію по карті.
+          </p>
         </div>
       </div>
     </div>
@@ -183,20 +431,31 @@
 
   <section id="screenshots">
     <div class="wrap">
-      <h2 class="section-title">Screenshots</h2>
-      <p class="section-sub">Launcher, overlay setup and chat capture example.</p>
+      <h2 class="section-title">Знімки екрана</h2>
+      <p class="section-sub">
+        Лаунчер, налаштування оверлею та приклад області захвату чату.
+      </p>
+
       <div class="screens">
         <figure>
-          <img src="images/launcher.png" alt="Yura RB Monitor launcher with license status and map button">
-          <figcaption>Launcher: license status, map button, overlay configuration and client status.</figcaption>
+          <img src="images/launcher.png" alt="Yura RB Monitor лаунчер зі статусом ліцензії та кнопкою карти">
+          <figcaption>
+            Лаунчер: статус ліцензії, кнопка карти, налаштування оверлею та перевірка компонентів.
+          </figcaption>
         </figure>
+
         <figure>
-          <img src="images/overlay-settings.png" alt="Overlay settings and active RB timer in Lineage II">
-          <figcaption>Overlay settings: configure timer position, text color, size and OBS chat capture zone.</figcaption>
+          <img src="images/overlay-settings.png" alt="Налаштування оверлею та активний таймер РБ у Lineage II">
+          <figcaption>
+            Налаштування оверлею: позиція таймера, колір тексту, розмір, масштаб і область чату OBS.
+          </figcaption>
         </figure>
+
         <figure>
-          <img src="images/chat-capture.png" alt="Lineage II chat capture zone used for OCR boss detection">
-          <figcaption>Chat capture: choose the exact area where RB messages appear so OCR can read them correctly.</figcaption>
+          <img src="images/chat-capture.png" alt="Область чату Lineage II для OCR розпізнавання повідомлень про босів">
+          <figcaption>
+            Захват чату: виберіть точну область, де з’являються повідомлення про РБ, щоб OCR читав їх коректно.
+          </figcaption>
         </figure>
       </div>
     </div>
@@ -204,27 +463,59 @@
 
   <section id="install">
     <div class="wrap">
-      <h2 class="section-title">How to install</h2>
+      <h2 class="section-title">Як встановити</h2>
+
       <div class="steps">
-        <div class="step"><div><strong>Download the client ZIP.</strong><br>Get the latest Windows package from GitHub Releases.</div></div>
-        <div class="step"><div><strong>Extract the ZIP.</strong><br>Do not run the EXE from inside the archive. Extract the full folder first.</div></div>
-        <div class="step"><div><strong>Run YuraRB_Launcher.exe.</strong><br>Activate trial or enter your license key.</div></div>
-        <div class="step"><div><strong>Configure OBS and overlay.</strong><br>Select the OBS source and chat capture zone, then start monitoring.</div></div>
+        <div class="step">
+          <div>
+            <strong>Завантажте ZIP-файл клієнта.</strong><br>
+            Скачайте останню Windows-версію з GitHub Releases.
+          </div>
+        </div>
+
+        <div class="step">
+          <div>
+            <strong>Розпакуйте ZIP-архів.</strong><br>
+            Не запускайте EXE прямо з архіву. Спочатку повністю розпакуйте папку.
+          </div>
+        </div>
+
+        <div class="step">
+          <div>
+            <strong>Запустіть YuraRB_Launcher.exe.</strong><br>
+            Активуйте пробний доступ або введіть ліцензійний ключ.
+          </div>
+        </div>
+
+        <div class="step">
+          <div>
+            <strong>Налаштуйте OBS та оверлей.</strong><br>
+            Виберіть OBS Source, область чату, позицію оверлею і запустіть моніторинг.
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="license">
     <div class="wrap">
-      <h2 class="section-title">License</h2>
+      <h2 class="section-title">Ліцензія</h2>
+
       <p class="section-sub">
-        The launcher supports trial activation and paid license keys. For a license key, contact support on Telegram.
+        Лаунчер підтримує пробний доступ на 3 дні та платні ліцензійні ключі.
+        Щоб отримати ключ, зверніться в Telegram.
       </p>
+
       <div class="actions">
-        <a class="btn primary" href="https://t.me/YuraRBMonitorBot">Contact Telegram</a>
+        <a class="btn primary" href="https://t.me/YuraRBMonitorBot">
+          Написати в Telegram
+        </a>
       </div>
+
       <div class="warning">
-        Use this software according to the rules of your Lineage II server. Yura RB Monitor does not farm, click, move the character or automate gameplay; it reads visible chat through OBS/OCR and displays timers.
+        Використовуйте програму відповідно до правил вашого Lineage II сервера.
+        Yura RB Monitor не фармить, не клікає, не рухає персонажа і не автоматизує геймплей.
+        Програма читає видимий чат через OBS/OCR і показує таймери.
       </div>
     </div>
   </section>
