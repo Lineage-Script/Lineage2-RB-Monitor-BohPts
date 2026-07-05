@@ -1,0 +1,7 @@
+{
+  "version": "v1.0.0.2",
+  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.2.zip",
+  "notes_uk": "Виправлено боса Андреас Ван Холтер та приховано CMD-вікна під час роботи OCR.",
+  "notes_ru": "Исправлен босс Андреас Ван Холтер и скрыты CMD-окна во время работы OCR.",
+  "required": false
+}
