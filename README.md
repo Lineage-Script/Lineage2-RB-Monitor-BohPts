@@ -1,4 +1,4 @@
-# Yura RB Monitor
+#RB Monitor Lineage 2
 
 Lineage II Raid Boss Monitor with OBS/OCR chat detection, respawn timers, launcher licensing, in-game overlay and shared online RB map.
 
