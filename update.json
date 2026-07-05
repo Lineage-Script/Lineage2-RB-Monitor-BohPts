@@ -1,8 +1,8 @@
 {
-  "version": "v1.0.0.2",
-  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.2.zip",
-  "notes_uk": "Виправлено боса Андреас Ван Холтер та приховано CMD-вікна під час роботи OCR.",
-  "notes_ru": "Исправлен босс Андреас Ван Холтер и скрыты CMD-окна во время работы OCR.",
-  "notes_en": "Fixed Andreas Van Holter boss detection and hidden CMD windows during OCR work.",
+  "version": "v1.0.0.3",
+  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.3.zip",
+  "notes_uk": "Додано автоматичне оновлення лаунчера, красиве вікно оновлення, анімацію кнопки під час завантаження, покращено мову інтерфейсу та блоки статусу. Також виправлено Андреас Ван Холтер і приховано CMD-вікна під час OCR.",
+  "notes_ru": "Добавлено автоматическое обновление лаунчера, красивое окно обновления, анимация кнопки во время загрузки, улучшен язык интерфейса и блоки статуса. Также исправлен Андреас Ван Холтер и скрыты CMD-окна во время OCR.",
+  "notes_en": "Added launcher auto-update, a beautiful update dialog, animated update button while downloading, improved interface language handling and status blocks. Also fixed Andreas Van Holter detection and hidden CMD windows during OCR.",
   "required": false
 }
