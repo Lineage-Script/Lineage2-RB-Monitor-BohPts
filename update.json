@@ -1,8 +1,8 @@
 {
-  "version": "v1.0.0.3",
-  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.3.zip",
-  "notes_uk": "Додано автоматичне оновлення лаунчера, красиве вікно оновлення, анімацію кнопки під час завантаження, покращено мову інтерфейсу та блоки статусу. Також виправлено Андреас Ван Холтер і приховано CMD-вікна під час OCR.",
-  "notes_ru": "Добавлено автоматическое обновление лаунчера, красивое окно обновления, анимация кнопки во время загрузки, улучшен язык интерфейса и блоки статуса. Также исправлен Андреас Ван Холтер и скрыты CMD-окна во время OCR.",
-  "notes_en": "Added launcher auto-update, a beautiful update dialog, animated update button while downloading, improved interface language handling and status blocks. Also fixed Andreas Van Holter detection and hidden CMD windows during OCR.",
+  "version": "v1.0.0.4",
+  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.4.zip",
+  "notes_uk": "Виправлено SSL-помилку перевірки оновлень. Додано надійнішу перевірку update.json через GitHub/GitHub Pages. Перейменовано поля налаштування оверлею та зони чату українською, російською й англійською: вліво / вправо, вверх / вниз, ширина, висота. Також додано захист від повторного спрацювання РБ при прокрутці чату: один і той самий РБ не запускається повторно протягом 30 хвилин.",
+  "notes_ru": "Исправлена SSL-ошибка проверки обновлений. Добавлена более надежная проверка update.json через GitHub/GitHub Pages. Переименованы поля настройки оверлея и зоны чата на русском, украинском и английском: влево / вправо, вверх / вниз, ширина, высота. Также добавлена защита от повторного срабатывания РБ при прокрутке чата: один и тот же РБ не запускается повторно в течение 30 минут.",
+  "notes_en": "Fixed SSL update check error. Added more reliable update.json checking through GitHub/GitHub Pages. Renamed overlay and chat area settings in English, Ukrainian and Russian: left / right, up / down, width and height. Also added anti-scroll protection for raid boss detection: the same boss will not restart again within 30 minutes.",
   "required": false
 }
