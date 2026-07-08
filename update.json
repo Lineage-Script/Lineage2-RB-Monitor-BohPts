@@ -1,10 +1,10 @@
 {
-  "version": "v1.0.0.5",
-  "min_supported_version": "v1.0.0.5",
+  "version": "v1.0.0.6",
+  "min_supported_version": "v1.0.0.6",
   "force_update": true,
-  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.5.zip",
-  "notes_uk": "Обов’язкове оновлення лаунчера. Додано перевірку мінімальної версії: старі версії не запускають скрипт, поки користувач не оновиться.",
-  "notes_ru": "Обязательное обновление лаунчера. Добавлена проверка минимальной версии: старые версии не запускают скрипт, пока пользователь не обновится.",
-  "notes_en": "Mandatory launcher update. Added minimum version check: old versions cannot launch the script until updated.",
+  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.6.zip",
+  "notes_uk": "Додано посилений захист trial. Лаунчер тепер надсилає захешовані hardware fingerprint-поля, а сервер може визначати підозрілі повторні спроби активації trial після зміни MAC, IP, VPN або назви ПК.",
+  "notes_ru": "Добавлена усиленная защита trial. Лаунчер теперь отправляет хешированные hardware fingerprint-поля, а сервер может определять подозрительные повторные попытки активации trial после смены MAC, IP, VPN или имени ПК.",
+  "notes_en": "Added stronger trial protection. The launcher now sends hashed hardware fingerprint fields, and the server can detect suspicious repeated trial attempts after changing MAC, IP, VPN or PC name.",
   "required": true
 }
