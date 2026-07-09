@@ -1,10 +1,10 @@
 {
-  "version": "v1.0.0.6",
-  "min_supported_version": "v1.0.0.6",
+  "version": "v1.0.0.7",
+  "min_supported_version": "v1.0.0.7",
   "force_update": true,
-  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.6.zip",
-  "notes_uk": "Додано посилений захист trial. Лаунчер тепер надсилає захешовані hardware fingerprint-поля, а сервер може визначати підозрілі повторні спроби активації trial після зміни MAC, IP, VPN або назви ПК.",
-  "notes_ru": "Добавлена усиленная защита trial. Лаунчер теперь отправляет хешированные hardware fingerprint-поля, а сервер может определять подозрительные повторные попытки активации trial после смены MAC, IP, VPN или имени ПК.",
-  "notes_en": "Added stronger trial protection. The launcher now sends hashed hardware fingerprint fields, and the server can detect suspicious repeated trial attempts after changing MAC, IP, VPN or PC name.",
+  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.7.zip",
+  "notes_uk": "Trial тепер активується через Telegram-бота. Лаунчер створює trial-заявку, відкриває Telegram з унікальним кодом, а сервер підтверджує Telegram ID і hardware fingerprint.",
+  "notes_ru": "Trial теперь активируется через Telegram-бота. Лаунчер создает trial-заявку, открывает Telegram с уникальным кодом, а сервер подтверждает Telegram ID и hardware fingerprint.",
+  "notes_en": "Trial activation now goes through the Telegram bot. The launcher creates a trial request, opens Telegram with a unique code, and the server verifies Telegram ID and hardware fingerprint.",
   "required": true
 }
