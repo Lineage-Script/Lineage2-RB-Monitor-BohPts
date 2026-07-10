@@ -1,10 +1,10 @@
 {
-  "version": "v1.11",
-  "min_supported_version": "v1.11",
+  "version": "v1.12",
+  "min_supported_version": "v1.12",
   "force_update": true,
-  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.11.zip",
-  "notes_uk": "Hotfix: виправлено цикл оновлення, коли локальна версія вже дорівнює останній версії. force_update більше не змушує перевстановлювати ту саму версію. Збережено оновлену інструкцію, Telegram trial та fingerprint-захист.",
-  "notes_ru": "Hotfix: исправлен цикл обновления, когда локальная версия уже равна последней версии. force_update больше не заставляет переустанавливать ту же версию. Сохранены обновлённая инструкция, Telegram trial и fingerprint-защита.",
-  "notes_en": "Hotfix: fixed update loop when the local version already equals the latest version. force_update no longer reinstalls the same version. Keeps updated instruction, Telegram trial and fingerprint protection.",
+  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.12.zip",
+  "notes_uk": "Hotfix: виправлено цикл оновлення, коли локальна версія вже дорівнює останній версії. force_update більше не змушує перевстановлювати ту саму версію. Виправлено шлях до Tesseract в інструкції. Збережено Telegram trial та fingerprint-захист.",
+  "notes_ru": "Hotfix: исправлен цикл обновления, когда локальная версия уже равна последней версии. force_update больше не заставляет переустанавливать ту же версию. Исправлен путь к Tesseract в инструкции. Сохранены Telegram trial и fingerprint-защита.",
+  "notes_en": "Hotfix: fixed update loop when the local version already equals the latest version. force_update no longer reinstalls the same version. Fixed Tesseract path in the instruction. Keeps Telegram trial and fingerprint protection.",
   "required": true
 }
