@@ -1,10 +1,10 @@
 {
-  "version": "v1.0.0.7",
-  "min_supported_version": "v1.0.0.7",
+  "version": "v1.0.0.8",
+  "min_supported_version": "v1.0.0.8",
   "force_update": true,
-  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.7.zip",
-  "notes_uk": "Trial тепер активується через Telegram-бота. Лаунчер створює trial-заявку, відкриває Telegram з унікальним кодом, а сервер підтверджує Telegram ID і hardware fingerprint.",
-  "notes_ru": "Trial теперь активируется через Telegram-бота. Лаунчер создает trial-заявку, открывает Telegram с уникальным кодом, а сервер подтверждает Telegram ID и hardware fingerprint.",
-  "notes_en": "Trial activation now goes through the Telegram bot. The launcher creates a trial request, opens Telegram with a unique code, and the server verifies Telegram ID and hardware fingerprint.",
+  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.8.zip",
+  "notes_uk": "Додано красиве вікно очікування Telegram trial. Лаунчер більше не виглядає завислим під час підтвердження trial через Telegram. Виправлено тексти UK/RU/EN і повідомлення waiting_telegram.",
+  "notes_ru": "Добавлено красивое окно ожидания Telegram trial. Лаунчер больше не выглядит зависшим во время подтверждения trial через Telegram. Исправлены тексты UK/RU/EN и сообщения waiting_telegram.",
+  "notes_en": "Added a Telegram trial waiting window. The launcher no longer looks frozen while waiting for Telegram trial confirmation. Fixed UK/RU/EN texts and waiting_telegram messages.",
   "required": true
 }
