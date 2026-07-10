@@ -1,10 +1,10 @@
 {
-  "version": "v1.0.0.8",
-  "min_supported_version": "v1.0.0.8",
+  "version": "v1.0.0.9",
+  "min_supported_version": "v1.0.0.9",
   "force_update": true,
-  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.8.zip",
-  "notes_uk": "Додано красиве вікно очікування Telegram trial. Лаунчер більше не виглядає завислим під час підтвердження trial через Telegram. Виправлено тексти UK/RU/EN і повідомлення waiting_telegram.",
-  "notes_ru": "Добавлено красивое окно ожидания Telegram trial. Лаунчер больше не выглядит зависшим во время подтверждения trial через Telegram. Исправлены тексты UK/RU/EN и сообщения waiting_telegram.",
-  "notes_en": "Added a Telegram trial waiting window. The launcher no longer looks frozen while waiting for Telegram trial confirmation. Fixed UK/RU/EN texts and waiting_telegram messages.",
+  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.9.zip",
+  "notes_uk": "Оновлено інструкцію в лаунчері. Додано актуальний опис trial через Telegram та підказку для RU-клієнта Lineage II: якщо бос є в чаті, але не зʼявляється в таймері, перевірте rus.traineddata у C:\\Program Files\\Tesseract-OCR\\tessdata. Також покращено SSL-перевірку оновлень і визначення поточної версії.",
+  "notes_ru": "Обновлена инструкция в лаунчере. Добавлено актуальное описание trial через Telegram и подсказка для RU-клиента Lineage II: если босс есть в чате, но не появляется в таймере, проверьте rus.traineddata в C:\\Program Files\\Tesseract-OCR\\tessdata. Также улучшена SSL-проверка обновлений и определение текущей версии.",
+  "notes_en": "Updated the launcher instruction. Added an up-to-date explanation of Telegram trial activation and a note for the RU Lineage II client: if a boss appears in chat but does not appear in the timer, check rus.traineddata in C:\\Program Files\\Tesseract-OCR\\tessdata. Also improved SSL update checks and current version detection.",
   "required": true
 }
