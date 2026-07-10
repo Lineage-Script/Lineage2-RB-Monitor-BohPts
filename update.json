@@ -1,10 +1,10 @@
 {
-  "version": "v1.0.0.9",
-  "min_supported_version": "v1.0.0.9",
+  "version": "v1.0.0.10",
+  "min_supported_version": "v1.0.0.10",
   "force_update": true,
-  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.9.zip",
-  "notes_uk": "Оновлено інструкцію в лаунчері. Додано актуальний опис trial через Telegram та підказку для RU-клієнта Lineage II: якщо бос є в чаті, але не зʼявляється в таймері, перевірте rus.traineddata у C:\\Program Files\\Tesseract-OCR\\tessdata. Також покращено SSL-перевірку оновлень і визначення поточної версії.",
-  "notes_ru": "Обновлена инструкция в лаунчере. Добавлено актуальное описание trial через Telegram и подсказка для RU-клиента Lineage II: если босс есть в чате, но не появляется в таймере, проверьте rus.traineddata в C:\\Program Files\\Tesseract-OCR\\tessdata. Также улучшена SSL-проверка обновлений и определение текущей версии.",
-  "notes_en": "Updated the launcher instruction. Added an up-to-date explanation of Telegram trial activation and a note for the RU Lineage II client: if a boss appears in chat but does not appear in the timer, check rus.traineddata in C:\\Program Files\\Tesseract-OCR\\tessdata. Also improved SSL update checks and current version detection.",
+  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.0.0.10.zip",
+  "notes_uk": "Hotfix: виправлено помилку оновлення module urllib.request has no attribute _yura_urlopen. Збережено оновлену інструкцію, Telegram trial та fingerprint-захист.",
+  "notes_ru": "Hotfix: исправлена ошибка обновления module urllib.request has no attribute _yura_urlopen. Сохранены обновлённая инструкция, Telegram trial и fingerprint-защита.",
+  "notes_en": "Hotfix: fixed updater error module urllib.request has no attribute _yura_urlopen. Keeps updated instruction, Telegram trial and fingerprint protection.",
   "required": true
 }
