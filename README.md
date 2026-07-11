@@ -6,7 +6,7 @@ Lineage II Raid Boss Monitor with OBS/OCR chat detection, respawn timers, launch
 
 Latest client ZIP:
 
-https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.12.zip
+https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.13.zip
 
 ## Features
 
