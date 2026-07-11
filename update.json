@@ -1,10 +1,10 @@
 {
-  "version": "v1.12",
-  "min_supported_version": "v1.12",
+  "version": "v1.13",
+  "min_supported_version": "v1.13",
   "force_update": true,
-  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.12.zip",
-  "notes_uk": "Hotfix: виправлено цикл оновлення, коли локальна версія вже дорівнює останній версії. force_update більше не змушує перевстановлювати ту саму версію. Виправлено шлях до Tesseract в інструкції. Збережено Telegram trial та fingerprint-захист.",
-  "notes_ru": "Hotfix: исправлен цикл обновления, когда локальная версия уже равна последней версии. force_update больше не заставляет переустанавливать ту же версию. Исправлен путь к Tesseract в инструкции. Сохранены Telegram trial и fingerprint-защита.",
-  "notes_en": "Hotfix: fixed update loop when the local version already equals the latest version. force_update no longer reinstalls the same version. Fixed Tesseract path in the instruction. Keeps Telegram trial and fingerprint protection.",
+  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.13.zip",
+  "notes_uk": "Hotfix: виправлено цикл оновлення в release-збірці лаунчера. Лаунчер більше не пропонує встановити ту саму актуальну версію. Оновлено іконку лаунчера та прибрано зайвий окремий файл іконки з архіву.",
+  "notes_ru": "Hotfix: исправлен цикл обновления в release-сборке лаунчера. Лаунчер больше не предлагает установить ту же актуальную версию. Обновлена иконка лаунчера и удалён лишний отдельный файл иконки из архива.",
+  "notes_en": "Hotfix: fixed launcher update loop in the release build. The launcher no longer offers to install the same current version. Updated launcher icon and removed the unnecessary standalone icon file from the archive.",
   "required": true
 }
