@@ -1,10 +1,10 @@
 {
-  "version": "v1.13",
-  "min_supported_version": "v1.13",
+  "version": "v1.14",
+  "min_supported_version": "v1.14",
   "force_update": true,
-  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.13.zip",
-  "notes_uk": "Hotfix: виправлено цикл оновлення в release-збірці лаунчера. Лаунчер більше не пропонує встановити ту саму актуальну версію. Оновлено іконку лаунчера та прибрано зайвий окремий файл іконки з архіву.",
-  "notes_ru": "Hotfix: исправлен цикл обновления в release-сборке лаунчера. Лаунчер больше не предлагает установить ту же актуальную версию. Обновлена иконка лаунчера и удалён лишний отдельный файл иконки из архива.",
-  "notes_en": "Hotfix: fixed launcher update loop in the release build. The launcher no longer offers to install the same current version. Updated launcher icon and removed the unnecessary standalone icon file from the archive.",
+  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.14.zip",
+  "notes_uk": "Оновлення v1.14: додано Ревущий Налетчик / Roaring Skylancer, оновлено карту, покращено інструкцію Tesseract OCR з підказкою про Additional language data, виправлено назви та покращено стабільність лаунчера.",
+  "notes_ru": "Обновление v1.14: добавлен Ревущий Налетчик / Roaring Skylancer, обновлена карта, улучшена инструкция Tesseract OCR с подсказкой про Additional language data, исправлены названия и улучшена стабильность лаунчера.",
+  "notes_en": "Update v1.14: added Roaring Skylancer / Ревущий Налетчик, updated the RB map, improved the Tesseract OCR instruction with the Additional language data hint, fixed names and improved launcher stability.",
   "required": true
 }
