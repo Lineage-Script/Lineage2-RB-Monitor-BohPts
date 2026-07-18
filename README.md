@@ -1,30 +1,15 @@
-#RB Monitor Lineage 2
+# Lineage 2 RB Monitor BoHpts
 
-Lineage II Raid Boss Monitor with OBS/OCR chat detection, respawn timers, launcher licensing, in-game overlay and shared online RB map.
+Lineage 2 High Five raid boss timer with OBS/OCR chat detection, respawn timers, launcher licensing, in-game overlay and shared online RB map.
+
+## Website
+
+https://lineage-script.github.io/Lineage2-RB-Monitor-BohPts/
 
 ## Download
 
-Latest client ZIP:
+https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_v1.14.zip
 
-https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.13.zip
+## Keywords
 
-## Features
-
-- OBS/OCR chat detection
-- Raid Boss respawn timers
-- In-game overlay
-- Shared online RB map
-- Trial and license key activation
-- Search and temporary RB point preview
-
-## Installation
-
-1. Download the ZIP from Releases.
-2. Extract the full folder.
-3. Run `YuraRB_Launcher.exe`.
-4. Activate trial or enter your license key.
-5. Configure OBS capture and overlay zone.
-
-## Notice
-
-Use this software according to the rules of your Lineage II server. Yura RB Monitor does not control the character or automate gameplay; it reads visible chat through OBS/OCR and displays timers.
+Lineage 2, Lineage 2 High Five, BoHpts, RB Monitor, Raid Boss Timer, Respawn Timer, OBS OCR, Tesseract OCR, Online RB Map, L2 High Five, L2 raidboss.

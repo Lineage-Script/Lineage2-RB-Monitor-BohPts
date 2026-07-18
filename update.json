@@ -2,9 +2,9 @@
   "version": "v1.14",
   "min_supported_version": "v1.14",
   "force_update": true,
-  "download_url": "https://github.com/yuzumaki55-spec/RB-Monitor/releases/latest/download/YuraRBMonitor_Client_v1.14.zip",
-  "notes_uk": "Оновлення v1.14: додано Ревущий Налетчик / Roaring Skylancer, оновлено карту, покращено інструкцію Tesseract OCR з підказкою про Additional language data, виправлено назви та покращено стабільність лаунчера.",
-  "notes_ru": "Обновление v1.14: добавлен Ревущий Налетчик / Roaring Skylancer, обновлена карта, улучшена инструкция Tesseract OCR с подсказкой про Additional language data, исправлены названия и улучшена стабильность лаунчера.",
-  "notes_en": "Update v1.14: added Roaring Skylancer / Ревущий Налетчик, updated the RB map, improved the Tesseract OCR instruction with the Additional language data hint, fixed names and improved launcher stability.",
+  "download_url": "https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_v1.14.zip",
+  "notes_uk": "Оновлення v1.14: додано Ревущий Налетчик / Roaring Skylancer, оновлено карту, покращено інструкцію Tesseract OCR, виправлено назви та стабільність лаунчера.",
+  "notes_ru": "Обновление v1.14: добавлен Ревущий Налетчик / Roaring Skylancer, обновлена карта, улучшена инструкция Tesseract OCR, исправлены названия и стабильность лаунчера.",
+  "notes_en": "Update v1.14: added Roaring Skylancer, updated the RB map, improved Tesseract OCR instructions, fixed names and launcher stability.",
   "required": true
 }

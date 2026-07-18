@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yuzumaki55-spec.github.io/RB-Monitor/sitemap.xml
+Sitemap: https://lineage-script.github.io/Lineage2-RB-Monitor-BohPts/sitemap.xml
