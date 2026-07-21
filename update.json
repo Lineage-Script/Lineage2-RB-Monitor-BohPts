@@ -1,10 +1,10 @@
 {
-  "version": "v1.15",
-  "min_supported_version": "v1.14",
+  "version": "v1.16",
+  "min_supported_version": "v1.15",
   "force_update": true,
-  "download_url": "https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_v1.15.zip",
-  "notes_uk": "Оновлення v1.15: лаунчер переведено на новий сайт Lineage2-RB-Monitor-BohPts, оновлено update.json, GitHub Releases і систему оновлення після перейменування сайту.",
-  "notes_ru": "Обновление v1.15: лаунчер переведён на новый сайт Lineage2-RB-Monitor-BohPts, обновлены update.json, GitHub Releases и система обновления после переименования сайта.",
-  "notes_en": "Update v1.15: launcher update system moved to the new Lineage2-RB-Monitor-BohPts website, update.json, GitHub Releases and renamed site update links were updated.",
+  "download_url": "https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_v1.16.zip",
+  "notes_uk": "Оновлення v1.16: пошук РБ тепер йде тільки по повній RU/EN назві, без коротких ru_id/id. Додано бірюзовий OCR-фільтр системних повідомлень, захист від старих рядків при старті, фікс Glaki/Flamestone Giant та Kernon/Kelone.",
+  "notes_ru": "Обновление v1.16: поиск РБ теперь идёт только по полному RU/EN названию, без коротких ru_id/id. Добавлен бирюзовый OCR-фильтр системных сообщений, защита от старых строк при старте, фикс Glaki/Flamestone Giant и Kernon/Kelone.",
+  "notes_en": "Update v1.16: RB detection now uses only full RU/EN boss names, without short ru_id/id matches. Added turquoise system-message OCR filter, startup old-chat protection, Glaki/Flamestone Giant fix, and Kernon/Kelone strict matching.",
   "required": true
 }
