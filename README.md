@@ -8,7 +8,7 @@ https://lineage-script.github.io/Lineage2-RB-Monitor-BohPts/
 
 ## Download
 
-https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_v1.16.zip
+https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_v1.17.zip
 
 ## Keywords
 
