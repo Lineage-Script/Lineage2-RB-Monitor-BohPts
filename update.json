@@ -1,10 +1,10 @@
 {
-  "version": "v1.17",
-  "min_supported_version": "v1.16",
+  "version": "v1.18",
+  "min_supported_version": "v1.17",
   "force_update": true,
-  "download_url": "https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_v1.17.zip",
-  "notes_uk": "Оновлення v1.17: виправлено помилковий запуск Lilith/Anakim від боса Закарон Возмездия Анаким. Lilith/Anakim тепер працює тільки з 22:00 до 23:00 і тільки по фразі повернення в мир.",
-  "notes_ru": "Обновление v1.17: исправлен ложный запуск Lilith/Anakim от босса Закарон Возмездия Анаким. Lilith/Anakim теперь работает только с 22:00 до 23:00 и только по фразе возврата в мир.",
-  "notes_en": "Update v1.17: fixed false Lilith/Anakim trigger from Zakaron Vengeance Anakim. Lilith/Anakim now works only between 22:00 and 23:00 and only from the world-return message.",
+  "download_url": "https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_v1.18.zip",
+  "notes_uk": "Оновлення v1.18: виправлено логіку Lilith/Anakim. Вікно респу тепер працює з 22:00 до 23:00 по MSK/GMT+3 незалежно від часу Windows. При поверненні Лилит/Анакім у мир запускається 10-хвилинний таймер.",
+  "notes_ru": "Обновление v1.18: исправлена логика Lilith/Anakim. Окно респа теперь работает с 22:00 до 23:00 по MSK/GMT+3 независимо от времени Windows. При возврате Лилит/Анаким в мир запускается 10-минутный таймер.",
+  "notes_en": "Update v1.18: fixed Lilith/Anakim logic. The respawn window now works from 22:00 to 23:00 MSK/GMT+3 independent of Windows local time. When Lilith/Anakim returns to the world, a 10-minute timer starts.",
   "required": true
 }
