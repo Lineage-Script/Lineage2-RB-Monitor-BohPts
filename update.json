@@ -1,10 +1,10 @@
 {
-  "version": "v1.16",
-  "min_supported_version": "v1.15",
+  "version": "v1.17",
+  "min_supported_version": "v1.16",
   "force_update": true,
-  "download_url": "https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_v1.16.zip",
-  "notes_uk": "Оновлення v1.16: пошук РБ тепер йде тільки по повній RU/EN назві, без коротких ru_id/id. Додано бірюзовий OCR-фільтр системних повідомлень, захист від старих рядків при старті, фікс Glaki/Flamestone Giant та Kernon/Kelone.",
-  "notes_ru": "Обновление v1.16: поиск РБ теперь идёт только по полному RU/EN названию, без коротких ru_id/id. Добавлен бирюзовый OCR-фильтр системных сообщений, защита от старых строк при старте, фикс Glaki/Flamestone Giant и Kernon/Kelone.",
-  "notes_en": "Update v1.16: RB detection now uses only full RU/EN boss names, without short ru_id/id matches. Added turquoise system-message OCR filter, startup old-chat protection, Glaki/Flamestone Giant fix, and Kernon/Kelone strict matching.",
+  "download_url": "https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_v1.17.zip",
+  "notes_uk": "Оновлення v1.17: виправлено помилковий запуск Lilith/Anakim від боса Закарон Возмездия Анаким. Lilith/Anakim тепер працює тільки з 22:00 до 23:00 і тільки по фразі повернення в мир.",
+  "notes_ru": "Обновление v1.17: исправлен ложный запуск Lilith/Anakim от босса Закарон Возмездия Анаким. Lilith/Anakim теперь работает только с 22:00 до 23:00 и только по фразе возврата в мир.",
+  "notes_en": "Update v1.17: fixed false Lilith/Anakim trigger from Zakaron Vengeance Anakim. Lilith/Anakim now works only between 22:00 and 23:00 and only from the world-return message.",
   "required": true
 }
