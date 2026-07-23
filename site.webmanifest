@@ -1,0 +1,19 @@
+{
+  "name": "Lineage 2 RB Monitor BoHpts",
+  "short_name": "Yura RB",
+  "icons": [
+    {
+      "src": "icons/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#d99b2b",
+  "background_color": "#050506",
+  "display": "standalone"
+}
