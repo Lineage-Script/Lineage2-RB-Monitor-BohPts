@@ -4,7 +4,7 @@ Lineage 2 High Five raid boss timer with OBS/OCR chat detection, respawn timers,
 
 ## Website
 
-https://lineage-script.github.io/Lineage2-RB-Monitor-BohPts/
+https://lineage-script.com/
 
 ## Download
 

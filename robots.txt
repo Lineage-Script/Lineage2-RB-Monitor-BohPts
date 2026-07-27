@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lineage-script.github.io/Lineage2-RB-Monitor-BohPts/sitemap.xml
+Sitemap: https://lineage-script.com/sitemap.xml
