@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0a0806">
+  <meta name="color-scheme" content="dark">
+  <title>Yura RB Monitor — test redesign</title>
+  <meta name="description" content="Test redesign for Yura RB Monitor — Lineage 2 raid boss radar, overlay and live map.">
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="icon" href="./assets/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="sparks" id="sparks" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Yura RB Monitor">
+        <span class="brand-mark"><img src="./assets/favicon.png" alt=""></span>
+        <span class="brand-copy">
+          <strong>Yura RB Monitor</strong>
+          <small>Lineage Script</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#features" data-i18n="navFeatures">Можливості</a>
+        <a href="#workflow" data-i18n="navSetup">Налаштування</a>
+        <a href="#map" data-i18n="navMap">Карта РБ</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+      </nav>
+
+      <div class="lang-switch" aria-label="Language">
+        <button type="button" data-lang="uk" class="active">UK</button>
+        <button type="button" data-lang="ru">RU</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="hero-aura" aria-hidden="true"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="pulse-dot"></span>
+            <span data-i18n="previewBadge">Тестовий дизайн • не основний сайт</span>
+          </div>
+          <h1 data-i18n-html="heroTitle">
+            Контроль рейд-босів<br><span>без ручних таймерів</span>
+          </h1>
+          <p class="hero-lead" data-i18n="heroLead">
+            OCR зчитує системний чат Lineage 2, запускає таймери, показує їх поверх гри та синхронізує активних РБ на онлайн-карті.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#workflow">
+              <span data-i18n="heroPrimary">Подивитися, як працює</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></svg>
+              <span data-i18n="download">Завантажити</span>
+            </a>
+          </div>
+          <div class="hero-metrics">
+            <div><strong>50+</strong><span data-i18n="metricBosses">рейд-босів</span></div>
+            <div><strong>3</strong><span data-i18n="metricLanguages">мови інтерфейсу</span></div>
+            <div><strong>Live</strong><span data-i18n="metricMap">синхронізація карти</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1" id="heroVisual">
+          <div class="frame frame-hero tilt">
+            <div class="frame-top">
+              <span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span>
+              <span data-i18n="liveInterface">Живий інтерфейс лаунчера</span>
+            </div>
+            <button class="image-button" type="button" data-lightbox data-lang-image="launcher">
+              <img id="heroImage" src="./assets/launcher-uk.webp" alt="Yura RB Monitor launcher interface">
+            </button>
+            <div class="scan-line"></div>
+          </div>
+          <div class="float-card float-ocr">
+            <span class="float-icon">◉</span>
+            <div><strong>OCR</strong><small data-i18n="ocrStatus">чат розпізнано</small></div>
+          </div>
+          <div class="float-card float-map">
+            <span class="float-icon">⌖</span>
+            <div><strong>Live Map</strong><small data-i18n="mapStatus">таймери синхронізовано</small></div>
+          </div>
+          <div class="float-card float-overlay">
+            <span class="float-icon">✦</span>
+            <div><strong>Overlay</strong><small data-i18n="overlayStatus">поверх гри</small></div>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#features" aria-label="Scroll">
+        <span></span>
+      </a>
+    </section>
+
+    <section class="section compact" id="features">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="kicker" data-i18n="whyKicker">Єдина система</p>
+          <h2 data-i18n-html="whyTitle">Усе потрібне для фарму РБ<br><span>в одному інтерфейсі</span></h2>
+          <p data-i18n="whyLead">Замість ручних секундомірів, скрінів у чаті та постійного перемикання між вікнами.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal tilt">
+            <div class="icon-shell">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM8 20h8M12 16v4M7 9h10M7 12h6"/></svg>
+            </div>
+            <h3 data-i18n="featureOcrTitle">OCR системного чату</h3>
+            <p data-i18n="featureOcrText">Скрипт знаходить повідомлення про появу або смерть РБ та запускає потрібний таймер.</p>
+            <span class="feature-index">01</span>
+          </article>
+
+          <article class="feature-card reveal delay-1 tilt">
+            <div class="icon-shell">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 data-i18n="featureOverlayTitle">Ігровий overlay</h3>
+            <p data-i18n="featureOverlayText">Таймери завжди видно поверх клієнта. Колір, масштаб, позиція та розмір налаштовуються.</p>
+            <span class="feature-index">02</span>
+          </article>
+
+          <article class="feature-card reveal delay-2 tilt">
+            <div class="icon-shell">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l5-2 6 2 5-2v14l-5 2-6-2-5 2zM9 4v14M15 6v14"/><circle cx="15" cy="11" r="1.5"/></svg>
+            </div>
+            <h3 data-i18n="featureMapTitle">Онлайн-карта РБ</h3>
+            <p data-i18n="featureMapText">Активні таймери з’являються на карті з назвами, координатами та станом респу.</p>
+            <span class="feature-index">03</span>
+          </article>
+
+          <article class="feature-card reveal delay-3 tilt">
+            <div class="icon-shell">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M7 4v6M17 4v6M5 11h14v9H5zM8 15h3M13 15h3"/></svg>
+            </div>
+            <h3 data-i18n="featureEpicTitle">Епік та спеціальні події</h3>
+            <p data-i18n="featureEpicText">Окремі повідомлення й сценарії для епік-босів, Lilith/Anakim та інших серверних подій.</p>
+            <span class="feature-index">04</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section workflow-section" id="workflow">
+      <div class="shell split-layout">
+        <div class="content-column reveal">
+          <p class="kicker" data-i18n="workflowKicker">Швидке налаштування</p>
+          <h2 data-i18n-html="workflowTitle">Покажи скрипту чат —<br><span>решту він зробить сам</span></h2>
+          <p class="section-copy" data-i18n="workflowLead">
+            Зона захвату налаштовується один раз. Після цього OCR читає лише потрібну частину вікна та не заважає грі.
+          </p>
+
+          <ol class="steps">
+            <li class="active">
+              <span>01</span>
+              <div><strong data-i18n="step1Title">Запусти гру та OBS</strong><small data-i18n="step1Text">WebSocket працює на стандартному порту 4455.</small></div>
+            </li>
+            <li>
+              <span>02</span>
+              <div><strong data-i18n="step2Title">Виділи системний чат</strong><small data-i18n="step2Text">Вкажи X, Y, ширину та висоту області OCR.</small></div>
+            </li>
+            <li>
+              <span>03</span>
+              <div><strong data-i18n="step3Title">Натисни «Запустити»</strong><small data-i18n="step3Text">Таймери й карта оновлюються автоматично.</small></div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="visual-stack reveal delay-1">
+          <div class="frame ornate-frame">
+            <button class="image-button" type="button" data-lightbox>
+              <img src="./assets/setup-guide.webp" alt="Visual guide for overlay and OCR capture settings" loading="lazy">
+            </button>
+            <span class="visual-label" data-i18n="visualGuide">Візуальна інструкція</span>
+          </div>
+          <div class="mini-frame">
+            <button class="image-button" type="button" data-lightbox>
+              <img src="./assets/chat-guide.webp" alt="Chat capture region example" loading="lazy">
+            </button>
+            <div>
+              <strong data-i18n="chatAreaTitle">Правильна зона чату</strong>
+              <small data-i18n="chatAreaText">У кадрі мають бути системні повідомлення про РБ.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section settings-section">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="kicker" data-i18n="settingsKicker">Гнучкий overlay</p>
+          <h2 data-i18n-html="settingsTitle">Виглядає так, як зручно<br><span>саме на твоєму екрані</span></h2>
+        </div>
+
+        <div class="showcase-grid">
+          <div class="showcase-visual reveal">
+            <div class="frame frame-wide">
+              <button class="image-button" type="button" data-lightbox data-lang-image="settings">
+                <img id="settingsImage" src="./assets/settings-uk.webp" alt="Localized overlay settings interface" loading="lazy">
+              </button>
+            </div>
+          </div>
+          <div class="showcase-copy reveal delay-1">
+            <div class="detail-item">
+              <span class="detail-number">01</span>
+              <div><h3 data-i18n="detail1Title">Точне позиціонування</h3><p data-i18n="detail1Text">Координати та розмір задаються чисельно, тому overlay легко поставити в потрібний кут.</p></div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-number">02</span>
+              <div><h3 data-i18n="detail2Title">Попередній перегляд</h3><p data-i18n="detail2Text">Перевір результат до запуску монітора та не витрачай час у грі.</p></div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-number">03</span>
+              <div><h3 data-i18n="detail3Title">Підтримка різних роздільностей</h3><p data-i18n="detail3Text">Окремо задається розмір кадру OBS і зона системного чату.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section map-section" id="map">
+      <div class="map-glow" aria-hidden="true"></div>
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="kicker" data-i18n="mapKicker">Жива карта</p>
+          <h2 data-i18n-html="mapTitle">Побач РБ на карті<br><span>раніше, ніж шукатимеш вручну</span></h2>
+          <p data-i18n="mapLead">Перемикай мову назв, шукай потрібного боса й стеж за активними таймерами з будь-якого пристрою.</p>
+        </div>
+
+        <div class="map-browser reveal">
+          <div class="browser-bar">
+            <span></span><span></span><span></span>
+            <div class="address">lineage-script.com / rb-map</div>
+            <div class="secure">● LIVE</div>
+          </div>
+          <button class="image-button" type="button" data-lightbox data-lang-image="map">
+            <img id="mapImage" src="./assets/map-ru.webp" alt="Yura RB Control live map" loading="lazy">
+          </button>
+          <div class="map-hotspot hotspot-a"><i></i><span data-i18n="hotspotSearch">Пошук РБ</span></div>
+          <div class="map-hotspot hotspot-b"><i></i><span data-i18n="hotspotTimer">Активний таймер</span></div>
+          <div class="map-hotspot hotspot-c"><i></i><span data-i18n="hotspotPoint">Точка на карті</span></div>
+        </div>
+
+        <div class="map-benefits">
+          <div class="reveal"><strong data-i18n="mapBenefit1Title">Пошук за назвою</strong><span data-i18n="mapBenefit1Text">RU та ENG назви босів.</span></div>
+          <div class="reveal delay-1"><strong data-i18n="mapBenefit2Title">Стани кольорами</strong><span data-i18n="mapBenefit2Text">Живий, респ та тимчасова точка.</span></div>
+          <div class="reveal delay-2"><strong data-i18n="mapBenefit3Title">Спільна синхронізація</strong><span data-i18n="mapBenefit3Text">Дані оновлюються для всіх користувачів.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section language-section">
+      <div class="shell language-panel reveal">
+        <div>
+          <p class="kicker" data-i18n="languageKicker">Три мови</p>
+          <h2 data-i18n-html="languageTitle">Один інструмент —<br><span>зрозумілий усім</span></h2>
+          <p data-i18n="languageLead">Лаунчер, налаштування та основні підказки доступні українською, російською й англійською.</p>
+        </div>
+        <div class="language-orbit" aria-hidden="true">
+          <span class="orbit-ring ring-one"></span>
+          <span class="orbit-ring ring-two"></span>
+          <div class="language-core"><img src="./assets/favicon.png" alt=""></div>
+          <span class="lang-node node-uk">UK</span>
+          <span class="lang-node node-ru">RU</span>
+          <span class="lang-node node-en">EN</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="shell faq-grid">
+        <div class="section-heading align-left reveal">
+          <p class="kicker">FAQ</p>
+          <h2 data-i18n-html="faqTitle">Питання перед<br><span>першим запуском</span></h2>
+          <p data-i18n="faqLead">Коротко про те, що потрібно для стабільної роботи.</p>
+        </div>
+        <div class="accordion reveal delay-1">
+          <details open>
+            <summary data-i18n="faq1Q">Чи потрібно тримати OBS відкритим?</summary>
+            <p data-i18n="faq1A">Так. OBS передає зображення системного чату через WebSocket, а скрипт розпізнає повідомлення OCR.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq2Q">Чи можна змінити положення overlay?</summary>
+            <p data-i18n="faq2A">Так. У налаштуваннях доступні координати X/Y, ширина, висота, масштаб і колір тексту.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq3Q">Карта працює на телефоні?</summary>
+            <p data-i18n="faq3A">Так. Інтерфейс карти адаптивний і відкривається у звичайному мобільному браузері.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq4Q">Чи підтримуються різні сервери?</summary>
+            <p data-i18n="faq4A">База фраз і босів налаштовується під сервер. Поточна версія орієнтована на High Five.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="shell cta-panel reveal">
+        <div class="cta-emblem"><img src="./assets/favicon.png" alt=""></div>
+        <div>
+          <p class="kicker" data-i18n="ctaKicker">Менше рутини. Більше гри.</p>
+          <h2 data-i18n="ctaTitle">Нехай таймери працюють замість тебе</h2>
+          <p data-i18n="ctaText">Встанови компоненти, вибери зону чату та запускай монітор однією кнопкою.</p>
+        </div>
+        <a class="btn btn-primary" href="https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest" target="_blank" rel="noopener">
+          <span data-i18n="downloadNow">Завантажити Yura RB Monitor</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="brand footer-brand">
+        <span class="brand-mark"><img src="./assets/favicon.png" alt=""></span>
+        <span class="brand-copy"><strong>Yura RB Monitor</strong><small>Lineage Script</small></span>
+      </div>
+      <p data-i18n="footerNote">Тестовий варіант дизайну. Основний сайт не змінено.</p>
+      <a href="#top" class="to-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">×</button>
+    <img id="lightboxImage" alt="">
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
