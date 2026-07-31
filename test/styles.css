@@ -303,6 +303,15 @@ h1 span,h2 span{
   outline:1px solid rgba(234,203,125,.72);
   outline-offset:4px;
 }
+.lightbox-close:hover{
+  color:#ffd979;
+  transform:scale(1.08);
+  text-shadow:0 0 16px rgba(234,203,125,.55);
+}
+.lightbox-close:focus-visible{
+  outline:1px solid rgba(234,203,125,.72);
+  outline-offset:4px;
+}
 
 .lightbox-close:hover{
   color:#ffd979;
