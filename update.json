@@ -1,10 +1,10 @@
 {
-  "version": "v1.18",
+  "version": "v1.19",
   "min_supported_version": "v1.17",
   "force_update": true,
-  "download_url": "https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_v1.18.zip",
-  "notes_uk": "Оновлення v1.18: виправлено логіку Lilith/Anakim. Вікно респу тепер працює з 22:00 до 23:00 по MSK/GMT+3 незалежно від часу Windows. При поверненні Лилит/Анакім у мир запускається 10-хвилинний таймер.",
-  "notes_ru": "Обновление v1.18: исправлена логика Lilith/Anakim. Окно респа теперь работает с 22:00 до 23:00 по MSK/GMT+3 независимо от времени Windows. При возврате Лилит/Анаким в мир запускается 10-минутный таймер.",
-  "notes_en": "Update v1.18: fixed Lilith/Anakim logic. The respawn window now works from 22:00 to 23:00 MSK/GMT+3 independent of Windows local time. When Lilith/Anakim returns to the world, a 10-minute timer starts.",
+  "download_url": "https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_v1.19.zip",
+  "notes_uk": "v1.19: виправлено визначення появи Ліліт/Анакім, 5-хвилинний live-таймер, захист від повторного OCR, Startup OCR Prime більше не блокує справжню появу боса. Оновлено стандартні параметри оверлею та посилання на lineage-script.com.",
+  "notes_ru": "v1.19: исправлено определение появления Лилит/Анаким, 5-минутный live-таймер, защита от повторного OCR, Startup OCR Prime больше не блокирует реальное появление босса. Обновлены стандартные параметры оверлея и ссылки на lineage-script.com.",
+  "notes_en": "v1.19: fixed Lilith/Anakim live detection, added the 5-minute live timer, duplicate OCR protection, and fixed Startup OCR Prime blocking real boss spawns. Updated default overlay settings and lineage-script.com links.",
   "required": true
 }
