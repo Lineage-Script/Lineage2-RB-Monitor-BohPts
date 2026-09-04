@@ -2,100 +2,100 @@ const DOWNLOAD_LATEST = "https://github.com/Lineage-Script/Lineage2-RB-Monitor-B
 
 const translations = {
   uk: {
-    navFeatures:"РњРѕР¶Р»РёРІРѕСЃС‚С–", navSetup:"РќР°Р»Р°С€С‚СѓРІР°РЅРЅСЏ", navMap:"РљР°СЂС‚Р° Р Р‘", navFaq:"FAQ",
-    previewBadge:"Yura RB Monitor вЂў Lineage 2 High Five вЂў BohPts x500",
-    heroTitle:"РљР°СЂС‚Р° Р Р‘ Р›2 С‚Р° С‚Р°Р№РјРµСЂ СЂРµР№Рґ-Р±РѕСЃС–РІ<br><span>Р±РµР· СЂСѓС‡РЅРёС… СЃРµРєСѓРЅРґРѕРјС–СЂС–РІ</span>",
-    heroLead:"Yura RB Monitor вЂ” РєР°СЂС‚Р° Р Р‘ Р›2 С– raid boss timer РґР»СЏ Lineage 2 High Five С‚Р° BohPts x500. OBS/OCR Р·С‡РёС‚СѓС” СЃРёСЃС‚РµРјРЅРёР№ С‡Р°С‚, Р·Р°РїСѓСЃРєР°С” С‚Р°Р№РјРµСЂРё СЂРµСЃРїСѓ, РїРѕРєР°Р·СѓС” overlay РїРѕРІРµСЂС… РіСЂРё С‚Р° СЃРёРЅС…СЂРѕРЅС–Р·СѓС” Р°РєС‚РёРІРЅРёС… СЂРµР№Рґ-Р±РѕСЃС–РІ РЅР° РѕРЅР»Р°Р№РЅ-РєР°СЂС‚С–.",
-    heroPrimary:"РџРѕРґРёРІРёС‚РёСЃСЏ, СЏРє РїСЂР°С†СЋС”", download:"Р—Р°РІР°РЅС‚Р°Р¶РёС‚Рё",
-    metricBosses:"СЂРµР№Рґ-Р±РѕСЃС–РІ", metricLanguages:"РјРѕРІРё С–РЅС‚РµСЂС„РµР№СЃСѓ", metricMap:"СЃРёРЅС…СЂРѕРЅС–Р·Р°С†С–СЏ РєР°СЂС‚Рё",
-    liveInterface:"Р–РёРІРёР№ С–РЅС‚РµСЂС„РµР№СЃ Р»Р°СѓРЅС‡РµСЂР°", ocrStatus:"С‡Р°С‚ СЂРѕР·РїС–Р·РЅР°РЅРѕ", mapStatus:"С‚Р°Р№РјРµСЂРё СЃРёРЅС…СЂРѕРЅС–Р·РѕРІР°РЅРѕ", overlayStatus:"РїРѕРІРµСЂС… РіСЂРё",
-    whyKicker:"Lineage 2 High Five", whyTitle:"РљР°СЂС‚Р° Р Р‘, С‚Р°Р№РјРµСЂ СЂРµСЃРїСѓ С‚Р° overlay<br><span>РІ РѕРґРЅРѕРјСѓ С–РЅС‚РµСЂС„РµР№СЃС–</span>",
-    whyLead:"Р—Р°РјС–СЃС‚СЊ СЂСѓС‡РЅРёС… СЃРµРєСѓРЅРґРѕРјС–СЂС–РІ С– СЃРєСЂС–РЅС–РІ Сѓ С‡Р°С‚С– вЂ” Р°РІС‚РѕРјР°С‚РёС‡РЅРµ OCR-СЂРѕР·РїС–Р·РЅР°РІР°РЅРЅСЏ, raid boss timer С‚Р° Р¶РёРІР° РєР°СЂС‚Р° Р Р‘ РґР»СЏ С„Р°СЂРјСѓ РЅР° High Five, Р· РєРѕРЅС„С–РіСѓСЂР°С†С–С”СЋ РїС–Рґ BohPts x500.",
-    featureOcrTitle:"OCR СЃРёСЃС‚РµРјРЅРѕРіРѕ С‡Р°С‚Сѓ", featureOcrText:"РЎРєСЂРёРїС‚ Р·РЅР°С…РѕРґРёС‚СЊ Сѓ С‡Р°С‚С– Lineage 2 РїРѕРІС–РґРѕРјР»РµРЅРЅСЏ РїСЂРѕ РїРѕСЏРІСѓ Р°Р±Рѕ СЃРјРµСЂС‚СЊ Р Р‘ С‚Р° Р·Р°РїСѓСЃРєР°С” РІС–РґРїРѕРІС–РґРЅРёР№ С‚Р°Р№РјРµСЂ СЂРµСЃРїСѓ.",
-    featureOverlayTitle:"Р†РіСЂРѕРІРёР№ overlay", featureOverlayText:"РўР°Р№РјРµСЂРё СЂРµР№Рґ-Р±РѕСЃС–РІ Р·Р°РІР¶РґРё РІРёРґРЅРѕ РїРѕРІРµСЂС… РєР»С–С”РЅС‚Р°. РљРѕР»С–СЂ, РјР°СЃС€С‚Р°Р±, РїРѕР·РёС†С–СЏ С‚Р° СЂРѕР·РјС–СЂ РЅР°Р»Р°С€С‚РѕРІСѓСЋС‚СЊСЃСЏ.",
-    featureMapTitle:"РћРЅР»Р°Р№РЅ-РєР°СЂС‚Р° Р Р‘ Р›2", featureMapText:"Lineage 2 High Five map РїРѕРєР°Р·СѓС” Р°РєС‚РёРІРЅС– С‚Р°Р№РјРµСЂРё, РЅР°Р·РІРё Р±РѕСЃС–РІ, РєРѕРѕСЂРґРёРЅР°С‚Рё, Р¶РёРІРёР№ СЃС‚Р°С‚СѓСЃ С– РІС–РєРЅРѕ СЂРµСЃРїСѓ.",
-    featureEpicTitle:"Р•РїС–Рє С‚Р° СЃРїРµС†С–Р°Р»СЊРЅС– РїРѕРґС–С—", featureEpicText:"РћРєСЂРµРјС– РїРѕРІС–РґРѕРјР»РµРЅРЅСЏ Р№ СЃС†РµРЅР°СЂС–С— РґР»СЏ РµРїС–Рє-Р±РѕСЃС–РІ, Lilith/Anakim С‚Р° С–РЅС€РёС… РїРѕРґС–Р№ СЃРµСЂРІРµСЂР°.",
-    workflowKicker:"РЁРІРёРґРєРµ РЅР°Р»Р°С€С‚СѓРІР°РЅРЅСЏ", workflowTitle:"РџРѕРєР°Р¶Рё СЃРєСЂРёРїС‚Сѓ С‡Р°С‚ вЂ”<br><span>СЂРµС€С‚Сѓ РІС–РЅ Р·СЂРѕР±РёС‚СЊ СЃР°Рј</span>",
-    workflowLead:"Р—РѕРЅР° Р·Р°С…РІР°С‚Сѓ РЅР°Р»Р°С€С‚РѕРІСѓС”С‚СЊСЃСЏ РѕРґРёРЅ СЂР°Р·. РџС–СЃР»СЏ С†СЊРѕРіРѕ OBS/OCR С‡РёС‚Р°С” РїРѕС‚СЂС–Р±РЅСѓ С‡Р°СЃС‚РёРЅСѓ РІС–РєРЅР° Lineage 2 С‚Р° Р°РІС‚РѕРјР°С‚РёС‡РЅРѕ РѕРЅРѕРІР»СЋС” RB timer С– РєР°СЂС‚Сѓ.",
-    step1Title:"Р—Р°РїСѓСЃС‚Рё РіСЂСѓ С‚Р° OBS", step1Text:"WebSocket РїСЂР°С†СЋС” РЅР° СЃС‚Р°РЅРґР°СЂС‚РЅРѕРјСѓ РїРѕСЂС‚Сѓ 4455.",
-    step2Title:"Р’РёРґС–Р»Рё СЃРёСЃС‚РµРјРЅРёР№ С‡Р°С‚", step2Text:"Р’РєР°Р¶Рё X, Y, С€РёСЂРёРЅСѓ С‚Р° РІРёСЃРѕС‚Сѓ РѕР±Р»Р°СЃС‚С– OCR.",
-    step3Title:"РќР°С‚РёСЃРЅРё В«Р—Р°РїСѓСЃС‚РёС‚РёВ»", step3Text:"РўР°Р№РјРµСЂРё Р Р‘ С– РѕРЅР»Р°Р№РЅ-РєР°СЂС‚Р° РѕРЅРѕРІР»СЋСЋС‚СЊСЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РЅРѕ.",
-    visualGuide:"Р’С–Р·СѓР°Р»СЊРЅР° С–РЅСЃС‚СЂСѓРєС†С–СЏ", chatAreaTitle:"РџСЂР°РІРёР»СЊРЅР° Р·РѕРЅР° С‡Р°С‚Сѓ", chatAreaText:"РЈ РєР°РґСЂС– РјР°СЋС‚СЊ Р±СѓС‚Рё СЃРёСЃС‚РµРјРЅС– РїРѕРІС–РґРѕРјР»РµРЅРЅСЏ РїСЂРѕ Р Р‘.",
-    settingsKicker:"Р“РЅСѓС‡РєРёР№ overlay", settingsTitle:"РўР°Р№РјРµСЂ Р Р‘ РїРѕРІРµСЂС… РіСЂРё<br><span>СЃР°РјРµ С‚Р°Рј, РґРµ Р·СЂСѓС‡РЅРѕ</span>",
-    detail1Title:"РўРѕС‡РЅРµ РїРѕР·РёС†С–РѕРЅСѓРІР°РЅРЅСЏ", detail1Text:"РљРѕРѕСЂРґРёРЅР°С‚Рё С‚Р° СЂРѕР·РјС–СЂ Р·Р°РґР°СЋС‚СЊСЃСЏ С‡РёСЃРµР»СЊРЅРѕ, С‚РѕРјСѓ overlay Р»РµРіРєРѕ РїРѕСЃС‚Р°РІРёС‚Рё РІ РїРѕС‚СЂС–Р±РЅРёР№ РєСѓС‚.",
-    detail2Title:"РџРѕРїРµСЂРµРґРЅС–Р№ РїРµСЂРµРіР»СЏРґ", detail2Text:"РџРµСЂРµРІС–СЂ СЂРµР·СѓР»СЊС‚Р°С‚ РґРѕ Р·Р°РїСѓСЃРєСѓ РјРѕРЅС–С‚РѕСЂР° С‚Р° РЅРµ РІРёС‚СЂР°С‡Р°Р№ С‡Р°СЃ Сѓ РіСЂС–.",
-    detail3Title:"РџС–РґС‚СЂРёРјРєР° СЂС–Р·РЅРёС… СЂРѕР·РґС–Р»СЊРЅРѕСЃС‚РµР№", detail3Text:"РћРєСЂРµРјРѕ Р·Р°РґР°С”С‚СЊСЃСЏ СЂРѕР·РјС–СЂ РєР°РґСЂСѓ OBS С– Р·РѕРЅР° СЃРёСЃС‚РµРјРЅРѕРіРѕ С‡Р°С‚Сѓ.",
-    mapKicker:"РљР°СЂС‚Р° Р Р‘ Р›2", mapTitle:"Lineage 2 High Five РєР°СЂС‚Р° Р Р‘<br><span>Р· Р¶РёРІРёРјРё С‚Р°Р№РјРµСЂР°РјРё СЂРµСЃРїСѓ</span>",
-    mapLead:"РЁСѓРєР°Р№ РїРѕС‚СЂС–Р±РЅРѕРіРѕ СЂРµР№Рґ-Р±РѕСЃР° Р·Р° РЅР°Р·РІРѕСЋ, РґРёРІРёСЃСЊ Р№РѕРіРѕ РєРѕРѕСЂРґРёРЅР°С‚Рё С‚Р° СЃС‚РµР¶ Р·Р° Р°РєС‚РёРІРЅРёРјРё С‚Р°Р№РјРµСЂР°РјРё Р· РџРљ Р°Р±Рѕ С‚РµР»РµС„РѕРЅР°. РљР°СЂС‚Р° РѕСЂС–С”РЅС‚РѕРІР°РЅР° РЅР° High Five С– РїРѕС‚РѕС‡РЅСѓ РєРѕРЅС„С–РіСѓСЂР°С†С–СЋ BohPts x500.",
-    hotspotSearch:"РџРѕС€СѓРє Р Р‘", hotspotTimer:"РђРєС‚РёРІРЅРёР№ С‚Р°Р№РјРµСЂ", hotspotPoint:"РўРѕС‡РєР° РЅР° РєР°СЂС‚С–",
-    mapBenefit1Title:"РџРѕС€СѓРє Р·Р° РЅР°Р·РІРѕСЋ", mapBenefit1Text:"RU С‚Р° ENG РЅР°Р·РІРё СЂРµР№Рґ-Р±РѕСЃС–РІ.",
-    mapBenefit2Title:"РЎС‚Р°РЅРё РєРѕР»СЊРѕСЂР°РјРё", mapBenefit2Text:"Р–РёРІРёР№, СЂРµСЃРї С‚Р° С‚РёРјС‡Р°СЃРѕРІР° С‚РѕС‡РєР°.",
-    mapBenefit3Title:"РЎРїС–Р»СЊРЅР° СЃРёРЅС…СЂРѕРЅС–Р·Р°С†С–СЏ", mapBenefit3Text:"Р”Р°РЅС– РєР°СЂС‚Рё Р Р‘ РѕРЅРѕРІР»СЋСЋС‚СЊСЃСЏ РґР»СЏ РІСЃС–С… РєРѕСЂРёСЃС‚СѓРІР°С‡С–РІ.",
-    seoKicker:"BohPts x500 вЂў High Five", seoTitle:"Raid Boss Timer С‚Р° РєР°СЂС‚Р° Р Р‘ РґР»СЏ Lineage 2",
-    seoLead:"РЇРєС‰Рѕ С‚Рё С€СѓРєР°С”С€ В«РєР°СЂС‚Р° СЂР± Р»2В», В«С‚Р°Р№РјРµСЂ СЂР± Р»2В», В«BohPts x500В», В«raid boss timerВ» Р°Р±Рѕ В«Lineage 2 High Five mapВ», Yura RB Monitor РѕР±вЂ™С”РґРЅСѓС” С†С– С„СѓРЅРєС†С–С— РІ РѕРґРЅРѕРјСѓ Windows-Р»Р°СѓРЅС‡РµСЂС–.",
-    seoCard1Title:"РљР°СЂС‚Р° Р Р‘ Р›2", seoCard1Text:"РћРЅР»Р°Р№РЅ-РєР°СЂС‚Р° СЂРµР№Рґ-Р±РѕСЃС–РІ Lineage 2 High Five Р· РєРѕРѕСЂРґРёРЅР°С‚Р°РјРё, РїРѕС€СѓРєРѕРј С– РїРѕС‚РѕС‡РЅРёРјРё С‚Р°Р№РјРµСЂР°РјРё СЂРµСЃРїСѓ.",
-    seoCard2Title:"BohPts x500", seoCard2Text:"РџРѕС‚РѕС‡РЅР° Р±Р°Р·Р° РїРѕРІС–РґРѕРјР»РµРЅСЊ, Р±РѕСЃС–РІ С– СЃС†РµРЅР°СЂС–С—РІ РјРѕРЅС–С‚РѕСЂР° РЅР°Р»Р°С€С‚РѕРІР°РЅР° РїС–Рґ High Five С‚Р° РІРёРєРѕСЂРёСЃС‚Р°РЅРЅСЏ РЅР° BohPts x500.",
-    seoCard3Title:"Raid Boss Timer", seoCard3Text:"РђРІС‚РѕРјР°С‚РёС‡РЅРёР№ raid boss respawn timer Р·Р°РїСѓСЃРєР°С”С‚СЊСЃСЏ РїС–СЃР»СЏ OCR-СЂРѕР·РїС–Р·РЅР°РІР°РЅРЅСЏ РїРѕРІС–РґРѕРјР»РµРЅСЊ Сѓ СЃРёСЃС‚РµРјРЅРѕРјСѓ С‡Р°С‚С–.",
-    languageKicker:"РўСЂРё РјРѕРІРё", languageTitle:"РћРґРёРЅ С–РЅСЃС‚СЂСѓРјРµРЅС‚ вЂ”<br><span>Р·СЂРѕР·СѓРјС–Р»РёР№ СѓСЃС–Рј</span>",
-    languageLead:"Р›Р°СѓРЅС‡РµСЂ, РєР°СЂС‚Р° Р Р‘, РЅР°Р»Р°С€С‚СѓРІР°РЅРЅСЏ С‚Р° РѕСЃРЅРѕРІРЅС– РїС–РґРєР°Р·РєРё РґРѕСЃС‚СѓРїРЅС– СѓРєСЂР°С—РЅСЃСЊРєРѕСЋ, СЂРѕСЃС–Р№СЃСЊРєРѕСЋ Р№ Р°РЅРіР»С–Р№СЃСЊРєРѕСЋ.",
-    faqTitle:"РџРёС‚Р°РЅРЅСЏ РїРµСЂРµРґ<br><span>РїРµСЂС€РёРј Р·Р°РїСѓСЃРєРѕРј</span>", faqLead:"РљРѕСЂРѕС‚РєРѕ РїСЂРѕ С‚Рµ, С‰Рѕ РїРѕС‚СЂС–Р±РЅРѕ РґР»СЏ СЃС‚Р°Р±С–Р»СЊРЅРѕС— СЂРѕР±РѕС‚Рё.",
-    faq1Q:"Р§Рё РїРѕС‚СЂС–Р±РЅРѕ С‚СЂРёРјР°С‚Рё OBS РІС–РґРєСЂРёС‚РёРј?", faq1A:"РўР°Рє. OBS РїРµСЂРµРґР°С” Р·РѕР±СЂР°Р¶РµРЅРЅСЏ СЃРёСЃС‚РµРјРЅРѕРіРѕ С‡Р°С‚Сѓ С‡РµСЂРµР· WebSocket, Р° РјРѕРЅС–С‚РѕСЂ СЂРѕР·РїС–Р·РЅР°С” РїРѕРІС–РґРѕРјР»РµРЅРЅСЏ OCR.",
-    faq2Q:"Р§Рё РјРѕР¶РЅР° Р·РјС–РЅРёС‚Рё РїРѕР»РѕР¶РµРЅРЅСЏ overlay?", faq2A:"РўР°Рє. РЈ РЅР°Р»Р°С€С‚СѓРІР°РЅРЅСЏС… РґРѕСЃС‚СѓРїРЅС– РєРѕРѕСЂРґРёРЅР°С‚Рё X/Y, С€РёСЂРёРЅР°, РІРёСЃРѕС‚Р°, РјР°СЃС€С‚Р°Р± С– РєРѕР»С–СЂ С‚РµРєСЃС‚Сѓ.",
-    faq3Q:"РљР°СЂС‚Р° Р Р‘ РїСЂР°С†СЋС” РЅР° С‚РµР»РµС„РѕРЅС–?", faq3A:"РўР°Рє. Р’С–РґРєСЂРёР№С‚Рµ РєР°СЂС‚Сѓ РЅР° Р»С–С†РµРЅР·РѕРІР°РЅРѕРјСѓ РџРљ, РЅР°С‚РёСЃРЅС–С‚СЊ В«РўРµР»РµС„РѕРЅ / QRВ» С– РІС–РґСЃРєР°РЅСѓР№С‚Рµ РѕРґРЅРѕСЂР°Р·РѕРІРёР№ QR-РєРѕРґ. Р”Рѕ РѕРґРЅС–С”С— Р»С–С†РµРЅР·С–С— РїСЂРёРІвЂ™СЏР·СѓС”С‚СЊСЃСЏ РѕРґРёРЅ РџРљ С– РѕРґРёРЅ РјРѕР±С–Р»СЊРЅРёР№ Р±СЂР°СѓР·РµСЂ.",
-    faq4Q:"Р”Р»СЏ СЏРєРѕРіРѕ СЃРµСЂРІРµСЂР° Р·СЂРѕР±Р»РµРЅРёР№ РјРѕРЅС–С‚РѕСЂ?", faq4A:"РђСЂС…С–С‚РµРєС‚СѓСЂР° СЂРѕР·СЂР°С…РѕРІР°РЅР° РЅР° Lineage 2 High Five. РџРѕС‚РѕС‡РЅР° РєРѕРЅС„С–РіСѓСЂР°С†С–СЏ С„СЂР°Р·, Р±РѕСЃС–РІ С– С‚Р°Р№РјРµСЂС–РІ РѕСЂС–С”РЅС‚РѕРІР°РЅР° РЅР° BohPts x500; Р±Р°Р·Р° РјРѕР¶Рµ Р°РґР°РїС‚СѓРІР°С‚РёСЃСЏ РїС–Рґ С–РЅС€РёР№ СЃРµСЂРІРµСЂ.",
-    ctaKicker:"РњРµРЅС€Рµ СЂСѓС‚РёРЅРё. Р‘С–Р»СЊС€Рµ РіСЂРё.", ctaTitle:"Р—Р°РїСѓСЃС‚Рё РєР°СЂС‚Сѓ Р Р‘ С– С‚Р°Р№РјРµСЂРё Lineage 2",
-    ctaText:"Р’СЃС‚Р°РЅРѕРІРё РєРѕРјРїРѕРЅРµРЅС‚Рё, РІРёР±РµСЂРё Р·РѕРЅСѓ С‡Р°С‚Сѓ С‚Р° Р·Р°РїСѓСЃРєР°Р№ Yura RB Monitor РѕРґРЅС–С”СЋ РєРЅРѕРїРєРѕСЋ.",
-    downloadNow:"Р—Р°РІР°РЅС‚Р°Р¶РёС‚Рё Yura RB Monitor", footerNote:"Lineage 2 High Five вЂў BohPts x500 вЂў РљР°СЂС‚Р° Р Р‘ вЂў Raid Boss Timer вЂў OBS/OCR"
+    navFeatures:"Можливості", navSetup:"Налаштування", navMap:"Карта РБ", navFaq:"FAQ",
+    previewBadge:"Yura RB Monitor • Lineage 2 High Five • BohPts x500",
+    heroTitle:"Карта РБ Л2<br>та таймер рейд-босів<br><span>без ручних секундомірів</span>",
+    heroLead:"Yura RB Monitor — карта РБ Л2 і raid boss timer для Lineage 2 High Five та BohPts x500. OBS/OCR зчитує системний чат, запускає таймери респу, показує overlay поверх гри та синхронізує активних рейд-босів на онлайн-карті.",
+    heroPrimary:"Подивитися, як працює", download:"Завантажити",
+    metricBosses:"рейд-босів", metricLanguages:"мови інтерфейсу", metricMap:"синхронізація карти",
+    liveInterface:"Живий інтерфейс лаунчера", ocrStatus:"чат розпізнано", mapStatus:"таймери синхронізовано", overlayStatus:"поверх гри",
+    whyKicker:"Lineage 2 High Five", whyTitle:"Карта РБ, таймер респу та overlay<br><span>в одному інтерфейсі</span>",
+    whyLead:"Замість ручних секундомірів і скрінів у чаті — автоматичне OCR-розпізнавання, raid boss timer та жива карта РБ для фарму на High Five, з конфігурацією під BohPts x500.",
+    featureOcrTitle:"OCR системного чату", featureOcrText:"Скрипт знаходить у чаті Lineage 2 повідомлення про появу або смерть РБ та запускає відповідний таймер респу.",
+    featureOverlayTitle:"Ігровий overlay", featureOverlayText:"Таймери рейд-босів завжди видно поверх клієнта. Колір, масштаб, позиція та розмір налаштовуються.",
+    featureMapTitle:"Онлайн-карта РБ Л2", featureMapText:"Lineage 2 High Five map показує активні таймери, назви босів, координати, живий статус і вікно респу.",
+    featureEpicTitle:"Епік та спеціальні події", featureEpicText:"Окремі повідомлення й сценарії для епік-босів, Lilith/Anakim та інших подій сервера.",
+    workflowKicker:"Швидке налаштування", workflowTitle:"Покажи скрипту чат —<br><span>решту він зробить сам</span>",
+    workflowLead:"Зона захвату налаштовується один раз. Після цього OBS/OCR читає потрібну частину вікна Lineage 2 та автоматично оновлює RB timer і карту.",
+    step1Title:"Запусти гру та OBS", step1Text:"WebSocket працює на стандартному порту 4455.",
+    step2Title:"Виділи системний чат", step2Text:"Вкажи X, Y, ширину та висоту області OCR.",
+    step3Title:"Натисни «Запустити»", step3Text:"Таймери РБ і онлайн-карта оновлюються автоматично.",
+    visualGuide:"Візуальна інструкція", chatAreaTitle:"Правильна зона чату", chatAreaText:"У кадрі мають бути системні повідомлення про РБ.",
+    settingsKicker:"Гнучкий overlay", settingsTitle:"Таймер РБ поверх гри<br><span>саме там, де зручно</span>",
+    detail1Title:"Точне позиціонування", detail1Text:"Координати та розмір задаються чисельно, тому overlay легко поставити в потрібний кут.",
+    detail2Title:"Попередній перегляд", detail2Text:"Перевір результат до запуску монітора та не витрачай час у грі.",
+    detail3Title:"Підтримка різних роздільностей", detail3Text:"Окремо задається розмір кадру OBS і зона системного чату.",
+    mapKicker:"Карта РБ Л2", mapTitle:"Lineage 2 High Five карта РБ<br><span>з живими таймерами респу</span>",
+    mapLead:"Шукай потрібного рейд-боса за назвою, дивись його координати та стеж за активними таймерами з ПК або телефона. Карта орієнтована на High Five і поточну конфігурацію BohPts x500.",
+    hotspotSearch:"Пошук РБ", hotspotTimer:"Активний таймер", hotspotPoint:"Точка на карті",
+    mapBenefit1Title:"Пошук за назвою", mapBenefit1Text:"RU та ENG назви рейд-босів.",
+    mapBenefit2Title:"Стани кольорами", mapBenefit2Text:"Живий, респ та тимчасова точка.",
+    mapBenefit3Title:"Спільна синхронізація", mapBenefit3Text:"Дані карти РБ оновлюються для всіх користувачів.",
+    seoKicker:"BohPts x500 • High Five", seoTitle:"Raid Boss Timer та карта РБ для Lineage 2",
+    seoLead:"Якщо ти шукаєш «карта рб л2», «таймер рб л2», «BohPts x500», «raid boss timer» або «Lineage 2 High Five map», Yura RB Monitor об’єднує ці функції в одному Windows-лаунчері.",
+    seoCard1Title:"Карта РБ Л2", seoCard1Text:"Онлайн-карта рейд-босів Lineage 2 High Five з координатами, пошуком і поточними таймерами респу.",
+    seoCard2Title:"BohPts x500", seoCard2Text:"Поточна база повідомлень, босів і сценаріїв монітора налаштована під High Five та використання на BohPts x500.",
+    seoCard3Title:"Raid Boss Timer", seoCard3Text:"Автоматичний raid boss respawn timer запускається після OCR-розпізнавання повідомлень у системному чаті.",
+    languageKicker:"Три мови", languageTitle:"Один інструмент —<br><span>зрозумілий усім</span>",
+    languageLead:"Лаунчер, карта РБ, налаштування та основні підказки доступні українською, російською й англійською.",
+    faqTitle:"Питання перед<br><span>першим запуском</span>", faqLead:"Коротко про те, що потрібно для стабільної роботи.",
+    faq1Q:"Чи потрібно тримати OBS відкритим?", faq1A:"Так. OBS передає зображення системного чату через WebSocket, а монітор розпізнає повідомлення OCR.",
+    faq2Q:"Чи можна змінити положення overlay?", faq2A:"Так. У налаштуваннях доступні координати X/Y, ширина, висота, масштаб і колір тексту.",
+    faq3Q:"Карта РБ працює на телефоні?", faq3A:"Так. Відкрийте карту на ліцензованому ПК, натисніть «Телефон / QR» і відскануйте одноразовий QR-код. До однієї ліцензії прив’язується один ПК і один мобільний браузер.",
+    faq4Q:"Для якого сервера зроблений монітор?", faq4A:"Архітектура розрахована на Lineage 2 High Five. Поточна конфігурація фраз, босів і таймерів орієнтована на BohPts x500; база може адаптуватися під інший сервер.",
+    ctaKicker:"Менше рутини. Більше гри.", ctaTitle:"Запусти Yura RB Monitor",
+    ctaText:"Встанови компоненти, вибери зону чату та запускай Yura RB Monitor однією кнопкою.",
+    downloadNow:"Завантажити Yura RB Monitor", footerNote:"Lineage 2 High Five • BohPts x500 • Карта РБ • Raid Boss Timer • OBS/OCR"
   },
   ru: {
-    navFeatures:"Р’РѕР·РјРѕР¶РЅРѕСЃС‚Рё", navSetup:"РќР°СЃС‚СЂРѕР№РєР°", navMap:"РљР°СЂС‚Р° Р Р‘", navFaq:"FAQ",
-    previewBadge:"Yura RB Monitor вЂў Lineage 2 High Five вЂў BohPts x500",
-    heroTitle:"РљР°СЂС‚Р° Р Р‘ Р›2 Рё С‚Р°Р№РјРµСЂ СЂРµР№Рґ-Р±РѕСЃСЃРѕРІ<br><span>Р±РµР· СЂСѓС‡РЅС‹С… СЃРµРєСѓРЅРґРѕРјРµСЂРѕРІ</span>",
-    heroLead:"Yura RB Monitor вЂ” РєР°СЂС‚Р° Р Р‘ Р›2 Рё raid boss timer РґР»СЏ Lineage 2 High Five Рё BohPts x500. OBS/OCR С‡РёС‚Р°РµС‚ СЃРёСЃС‚РµРјРЅС‹Р№ С‡Р°С‚, Р·Р°РїСѓСЃРєР°РµС‚ С‚Р°Р№РјРµСЂС‹ СЂРµСЃРїР°, РїРѕРєР°Р·С‹РІР°РµС‚ overlay РїРѕРІРµСЂС… РёРіСЂС‹ Рё СЃРёРЅС…СЂРѕРЅРёР·РёСЂСѓРµС‚ Р°РєС‚РёРІРЅС‹С… СЂРµР№Рґ-Р±РѕСЃСЃРѕРІ РЅР° РѕРЅР»Р°Р№РЅ-РєР°СЂС‚Рµ.",
-    heroPrimary:"РџРѕСЃРјРѕС‚СЂРµС‚СЊ, РєР°Рє СЂР°Р±РѕС‚Р°РµС‚", download:"РЎРєР°С‡Р°С‚СЊ",
-    metricBosses:"СЂРµР№Рґ-Р±РѕСЃСЃРѕРІ", metricLanguages:"СЏР·С‹РєР° РёРЅС‚РµСЂС„РµР№СЃР°", metricMap:"СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ РєР°СЂС‚С‹",
-    liveInterface:"Р–РёРІРѕР№ РёРЅС‚РµСЂС„РµР№СЃ Р»Р°СѓРЅС‡РµСЂР°", ocrStatus:"С‡Р°С‚ СЂР°СЃРїРѕР·РЅР°РЅ", mapStatus:"С‚Р°Р№РјРµСЂС‹ СЃРёРЅС…СЂРѕРЅРёР·РёСЂРѕРІР°РЅС‹", overlayStatus:"РїРѕРІРµСЂС… РёРіСЂС‹",
-    whyKicker:"Lineage 2 High Five", whyTitle:"РљР°СЂС‚Р° Р Р‘, С‚Р°Р№РјРµСЂ СЂРµСЃРїР° Рё overlay<br><span>РІ РѕРґРЅРѕРј РёРЅС‚РµСЂС„РµР№СЃРµ</span>",
-    whyLead:"Р’РјРµСЃС‚Рѕ СЂСѓС‡РЅС‹С… СЃРµРєСѓРЅРґРѕРјРµСЂРѕРІ Рё СЃРєСЂРёРЅРѕРІ вЂ” Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ OCR-СЂР°СЃРїРѕР·РЅР°РІР°РЅРёРµ, raid boss timer Рё Р¶РёРІР°СЏ РєР°СЂС‚Р° Р Р‘ РґР»СЏ High Five, СЃ РєРѕРЅС„РёРіСѓСЂР°С†РёРµР№ РїРѕРґ BohPts x500.",
-    featureOcrTitle:"OCR СЃРёСЃС‚РµРјРЅРѕРіРѕ С‡Р°С‚Р°", featureOcrText:"РњРѕРЅРёС‚РѕСЂ РЅР°С…РѕРґРёС‚ РІ С‡Р°С‚Рµ Lineage 2 СЃРѕРѕР±С‰РµРЅРёСЏ Рѕ РїРѕСЏРІР»РµРЅРёРё РёР»Рё СЃРјРµСЂС‚Рё Р Р‘ Рё Р·Р°РїСѓСЃРєР°РµС‚ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёР№ С‚Р°Р№РјРµСЂ СЂРµСЃРїР°.",
-    featureOverlayTitle:"РРіСЂРѕРІРѕР№ overlay", featureOverlayText:"РўР°Р№РјРµСЂС‹ СЂРµР№Рґ-Р±РѕСЃСЃРѕРІ РІСЃРµРіРґР° РІРёРґРЅС‹ РїРѕРІРµСЂС… РєР»РёРµРЅС‚Р°. Р¦РІРµС‚, РјР°СЃС€С‚Р°Р±, РїРѕР·РёС†РёСЏ Рё СЂР°Р·РјРµСЂ РЅР°СЃС‚СЂР°РёРІР°СЋС‚СЃСЏ.",
-    featureMapTitle:"РћРЅР»Р°Р№РЅ-РєР°СЂС‚Р° Р Р‘ Р›2", featureMapText:"Lineage 2 High Five map РїРѕРєР°Р·С‹РІР°РµС‚ Р°РєС‚РёРІРЅС‹Рµ С‚Р°Р№РјРµСЂС‹, РЅР°Р·РІР°РЅРёСЏ Р±РѕСЃСЃРѕРІ, РєРѕРѕСЂРґРёРЅР°С‚С‹, Р¶РёРІРѕР№ СЃС‚Р°С‚СѓСЃ Рё РѕРєРЅРѕ СЂРµСЃРїР°.",
-    featureEpicTitle:"Р­РїРёРє Рё РѕСЃРѕР±С‹Рµ СЃРѕР±С‹С‚РёСЏ", featureEpicText:"РћС‚РґРµР»СЊРЅС‹Рµ СЃРѕРѕР±С‰РµРЅРёСЏ Рё СЃС†РµРЅР°СЂРёРё РґР»СЏ СЌРїРёРє-Р±РѕСЃСЃРѕРІ, Lilith/Anakim Рё РґСЂСѓРіРёС… СЃРµСЂРІРµСЂРЅС‹С… СЃРѕР±С‹С‚РёР№.",
-    workflowKicker:"Р‘С‹СЃС‚СЂР°СЏ РЅР°СЃС‚СЂРѕР№РєР°", workflowTitle:"РџРѕРєР°Р¶Рё СЃРєСЂРёРїС‚Сѓ С‡Р°С‚ вЂ”<br><span>РѕСЃС‚Р°Р»СЊРЅРѕРµ РѕРЅ СЃРґРµР»Р°РµС‚ СЃР°Рј</span>",
-    workflowLead:"Р—РѕРЅР° Р·Р°С…РІР°С‚Р° РЅР°СЃС‚СЂР°РёРІР°РµС‚СЃСЏ РѕРґРёРЅ СЂР°Р·. Р—Р°С‚РµРј OBS/OCR С‡РёС‚Р°РµС‚ РЅСѓР¶РЅСѓСЋ С‡Р°СЃС‚СЊ РѕРєРЅР° Lineage 2 Рё Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РѕР±РЅРѕРІР»СЏРµС‚ RB timer Рё РєР°СЂС‚Сѓ.",
-    step1Title:"Р—Р°РїСѓСЃС‚Рё РёРіСЂСѓ Рё OBS", step1Text:"WebSocket СЂР°Р±РѕС‚Р°РµС‚ РЅР° СЃС‚Р°РЅРґР°СЂС‚РЅРѕРј РїРѕСЂС‚Сѓ 4455.",
-    step2Title:"Р’С‹РґРµР»Рё СЃРёСЃС‚РµРјРЅС‹Р№ С‡Р°С‚", step2Text:"РЈРєР°Р¶Рё X, Y, С€РёСЂРёРЅСѓ Рё РІС‹СЃРѕС‚Сѓ РѕР±Р»Р°СЃС‚Рё OCR.",
-    step3Title:"РќР°Р¶РјРё В«Р—Р°РїСѓСЃС‚РёС‚СЊВ»", step3Text:"РўР°Р№РјРµСЂС‹ Р Р‘ Рё РѕРЅР»Р°Р№РЅ-РєР°СЂС‚Р° РѕР±РЅРѕРІР»СЏСЋС‚СЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё.",
-    visualGuide:"Р’РёР·СѓР°Р»СЊРЅР°СЏ РёРЅСЃС‚СЂСѓРєС†РёСЏ", chatAreaTitle:"РџСЂР°РІРёР»СЊРЅР°СЏ Р·РѕРЅР° С‡Р°С‚Р°", chatAreaText:"Р’ РєР°РґСЂРµ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ СЃРёСЃС‚РµРјРЅС‹Рµ СЃРѕРѕР±С‰РµРЅРёСЏ Рѕ Р Р‘.",
-    settingsKicker:"Р“РёР±РєРёР№ overlay", settingsTitle:"РўР°Р№РјРµСЂ Р Р‘ РїРѕРІРµСЂС… РёРіСЂС‹<br><span>С‚Р°Рј, РіРґРµ СѓРґРѕР±РЅРѕ</span>",
-    detail1Title:"РўРѕС‡РЅРѕРµ РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ", detail1Text:"РљРѕРѕСЂРґРёРЅР°С‚С‹ Рё СЂР°Р·РјРµСЂ Р·Р°РґР°СЋС‚СЃСЏ С‡РёСЃР»РµРЅРЅРѕ, РїРѕСЌС‚РѕРјСѓ overlay Р»РµРіРєРѕ РїРѕСЃС‚Р°РІРёС‚СЊ РІ РЅСѓР¶РЅС‹Р№ СѓРіРѕР».",
-    detail2Title:"РџСЂРµРґРІР°СЂРёС‚РµР»СЊРЅС‹Р№ РїСЂРѕСЃРјРѕС‚СЂ", detail2Text:"РџСЂРѕРІРµСЂСЊ СЂРµР·СѓР»СЊС‚Р°С‚ РґРѕ Р·Р°РїСѓСЃРєР° РјРѕРЅРёС‚РѕСЂР° Рё РЅРµ С‚СЂР°С‚СЊ РІСЂРµРјСЏ РІ РёРіСЂРµ.",
-    detail3Title:"РџРѕРґРґРµСЂР¶РєР° СЂР°Р·РЅС‹С… СЂР°Р·СЂРµС€РµРЅРёР№", detail3Text:"РћС‚РґРµР»СЊРЅРѕ Р·Р°РґР°С‘С‚СЃСЏ СЂР°Р·РјРµСЂ РєР°РґСЂР° OBS Рё Р·РѕРЅР° СЃРёСЃС‚РµРјРЅРѕРіРѕ С‡Р°С‚Р°.",
-    mapKicker:"РљР°СЂС‚Р° Р Р‘ Р›2", mapTitle:"Lineage 2 High Five РєР°СЂС‚Р° Р Р‘<br><span>СЃ Р¶РёРІС‹РјРё С‚Р°Р№РјРµСЂР°РјРё СЂРµСЃРїР°</span>",
-    mapLead:"РС‰Рё РЅСѓР¶РЅРѕРіРѕ СЂРµР№Рґ-Р±РѕСЃСЃР° РїРѕ РЅР°Р·РІР°РЅРёСЋ, СЃРјРѕС‚СЂРё РєРѕРѕСЂРґРёРЅР°С‚С‹ Рё СЃР»РµРґРё Р·Р° Р°РєС‚РёРІРЅС‹РјРё С‚Р°Р№РјРµСЂР°РјРё СЃ РџРљ РёР»Рё С‚РµР»РµС„РѕРЅР°. РљР°СЂС‚Р° РѕСЂРёРµРЅС‚РёСЂРѕРІР°РЅР° РЅР° High Five Рё С‚РµРєСѓС‰СѓСЋ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ BohPts x500.",
-    hotspotSearch:"РџРѕРёСЃРє Р Р‘", hotspotTimer:"РђРєС‚РёРІРЅС‹Р№ С‚Р°Р№РјРµСЂ", hotspotPoint:"РўРѕС‡РєР° РЅР° РєР°СЂС‚Рµ",
-    mapBenefit1Title:"РџРѕРёСЃРє РїРѕ РЅР°Р·РІР°РЅРёСЋ", mapBenefit1Text:"RU Рё ENG РЅР°Р·РІР°РЅРёСЏ СЂРµР№Рґ-Р±РѕСЃСЃРѕРІ.",
-    mapBenefit2Title:"РЎРѕСЃС‚РѕСЏРЅРёСЏ С†РІРµС‚РѕРј", mapBenefit2Text:"Р–РёРІРѕР№, СЂРµСЃРї Рё РІСЂРµРјРµРЅРЅР°СЏ С‚РѕС‡РєР°.",
-    mapBenefit3Title:"РћР±С‰Р°СЏ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ", mapBenefit3Text:"Р”Р°РЅРЅС‹Рµ РєР°СЂС‚С‹ Р Р‘ РѕР±РЅРѕРІР»СЏСЋС‚СЃСЏ РґР»СЏ РІСЃРµС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№.",
-    seoKicker:"BohPts x500 вЂў High Five", seoTitle:"Raid Boss Timer Рё РєР°СЂС‚Р° Р Р‘ РґР»СЏ Lineage 2",
-    seoLead:"Р•СЃР»Рё РІС‹ РёС‰РµС‚Рµ В«РєР°СЂС‚Р° СЂР± Р»2В», В«С‚Р°Р№РјРµСЂ СЂР± Р»2В», В«BohPts x500В», В«raid boss timerВ» РёР»Рё В«Lineage 2 High Five mapВ», Yura RB Monitor РѕР±СЉРµРґРёРЅСЏРµС‚ СЌС‚Рё С„СѓРЅРєС†РёРё РІ РѕРґРЅРѕРј Windows-Р»Р°СѓРЅС‡РµСЂРµ.",
-    seoCard1Title:"РљР°СЂС‚Р° Р Р‘ Р›2", seoCard1Text:"РћРЅР»Р°Р№РЅ-РєР°СЂС‚Р° СЂРµР№Рґ-Р±РѕСЃСЃРѕРІ Lineage 2 High Five СЃ РєРѕРѕСЂРґРёРЅР°С‚Р°РјРё, РїРѕРёСЃРєРѕРј Рё С‚РµРєСѓС‰РёРјРё С‚Р°Р№РјРµСЂР°РјРё СЂРµСЃРїР°.",
-    seoCard2Title:"BohPts x500", seoCard2Text:"РўРµРєСѓС‰Р°СЏ Р±Р°Р·Р° СЃРѕРѕР±С‰РµРЅРёР№, Р±РѕСЃСЃРѕРІ Рё СЃС†РµРЅР°СЂРёРµРІ РјРѕРЅРёС‚РѕСЂР° РЅР°СЃС‚СЂРѕРµРЅР° РїРѕРґ High Five Рё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РЅР° BohPts x500.",
-    seoCard3Title:"Raid Boss Timer", seoCard3Text:"РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРёР№ raid boss respawn timer Р·Р°РїСѓСЃРєР°РµС‚СЃСЏ РїРѕСЃР»Рµ OCR-СЂР°СЃРїРѕР·РЅР°РІР°РЅРёСЏ СЃРѕРѕР±С‰РµРЅРёСЏ РІ СЃРёСЃС‚РµРјРЅРѕРј С‡Р°С‚Рµ.",
-    languageKicker:"РўСЂРё СЏР·С‹РєР°", languageTitle:"РћРґРёРЅ РёРЅСЃС‚СЂСѓРјРµРЅС‚ вЂ”<br><span>РїРѕРЅСЏС‚РЅС‹Р№ РІСЃРµРј</span>",
-    languageLead:"Р›Р°СѓРЅС‡РµСЂ, РєР°СЂС‚Р° Р Р‘, РЅР°СЃС‚СЂРѕР№РєРё Рё РѕСЃРЅРѕРІРЅС‹Рµ РїРѕРґСЃРєР°Р·РєРё РґРѕСЃС‚СѓРїРЅС‹ РЅР° СѓРєСЂР°РёРЅСЃРєРѕРј, СЂСѓСЃСЃРєРѕРј Рё Р°РЅРіР»РёР№СЃРєРѕРј.",
-    faqTitle:"Р’РѕРїСЂРѕСЃС‹ РїРµСЂРµРґ<br><span>РїРµСЂРІС‹Рј Р·Р°РїСѓСЃРєРѕРј</span>", faqLead:"РљРѕСЂРѕС‚РєРѕ Рѕ С‚РѕРј, С‡С‚Рѕ РЅСѓР¶РЅРѕ РґР»СЏ СЃС‚Р°Р±РёР»СЊРЅРѕР№ СЂР°Р±РѕС‚С‹.",
-    faq1Q:"РќСѓР¶РЅРѕ Р»Рё РґРµСЂР¶Р°С‚СЊ OBS РѕС‚РєСЂС‹С‚С‹Рј?", faq1A:"Р”Р°. OBS РїРµСЂРµРґР°С‘С‚ РёР·РѕР±СЂР°Р¶РµРЅРёРµ СЃРёСЃС‚РµРјРЅРѕРіРѕ С‡Р°С‚Р° С‡РµСЂРµР· WebSocket, Р° РјРѕРЅРёС‚РѕСЂ СЂР°СЃРїРѕР·РЅР°С‘С‚ СЃРѕРѕР±С‰РµРЅРёСЏ OCR.",
-    faq2Q:"РњРѕР¶РЅРѕ РёР·РјРµРЅРёС‚СЊ РїРѕР»РѕР¶РµРЅРёРµ overlay?", faq2A:"Р”Р°. Р’ РЅР°СЃС‚СЂРѕР№РєР°С… РґРѕСЃС‚СѓРїРЅС‹ РєРѕРѕСЂРґРёРЅР°С‚С‹ X/Y, С€РёСЂРёРЅР°, РІС‹СЃРѕС‚Р°, РјР°СЃС€С‚Р°Р± Рё С†РІРµС‚ С‚РµРєСЃС‚Р°.",
-    faq3Q:"РљР°СЂС‚Р° Р Р‘ СЂР°Р±РѕС‚Р°РµС‚ РЅР° С‚РµР»РµС„РѕРЅРµ?", faq3A:"Р”Р°. РћС‚РєСЂРѕР№С‚Рµ РєР°СЂС‚Сѓ РЅР° Р»РёС†РµРЅР·РёСЂРѕРІР°РЅРЅРѕРј РџРљ, РЅР°Р¶РјРёС‚Рµ В«РўРµР»РµС„РѕРЅ / QRВ» Рё РѕС‚СЃРєР°РЅРёСЂСѓР№С‚Рµ РѕРґРЅРѕСЂР°Р·РѕРІС‹Р№ QR-РєРѕРґ. Рљ РѕРґРЅРѕР№ Р»РёС†РµРЅР·РёРё РїСЂРёРІСЏР·С‹РІР°РµС‚СЃСЏ РѕРґРёРЅ РџРљ Рё РѕРґРёРЅ РјРѕР±РёР»СЊРЅС‹Р№ Р±СЂР°СѓР·РµСЂ.",
-    faq4Q:"Р”Р»СЏ РєР°РєРѕРіРѕ СЃРµСЂРІРµСЂР° СЃРґРµР»Р°РЅ РјРѕРЅРёС‚РѕСЂ?", faq4A:"РђСЂС…РёС‚РµРєС‚СѓСЂР° СЂР°СЃСЃС‡РёС‚Р°РЅР° РЅР° Lineage 2 High Five. РўРµРєСѓС‰Р°СЏ РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ С„СЂР°Р·, Р±РѕСЃСЃРѕРІ Рё С‚Р°Р№РјРµСЂРѕРІ РѕСЂРёРµРЅС‚РёСЂРѕРІР°РЅР° РЅР° BohPts x500; Р±Р°Р·Р° РјРѕР¶РµС‚ Р±С‹С‚СЊ Р°РґР°РїС‚РёСЂРѕРІР°РЅР° РїРѕРґ РґСЂСѓРіРѕР№ СЃРµСЂРІРµСЂ.",
-    ctaKicker:"РњРµРЅСЊС€Рµ СЂСѓС‚РёРЅС‹. Р‘РѕР»СЊС€Рµ РёРіСЂС‹.", ctaTitle:"Р—Р°РїСѓСЃС‚Рё РєР°СЂС‚Сѓ Р Р‘ Рё С‚Р°Р№РјРµСЂС‹ Lineage 2",
-    ctaText:"РЈСЃС‚Р°РЅРѕРІРё РєРѕРјРїРѕРЅРµРЅС‚С‹, РІС‹Р±РµСЂРё Р·РѕРЅСѓ С‡Р°С‚Р° Рё Р·Р°РїСѓСЃРєР°Р№ Yura RB Monitor РѕРґРЅРѕР№ РєРЅРѕРїРєРѕР№.",
-    downloadNow:"РЎРєР°С‡Р°С‚СЊ Yura RB Monitor", footerNote:"Lineage 2 High Five вЂў BohPts x500 вЂў РљР°СЂС‚Р° Р Р‘ вЂў Raid Boss Timer вЂў OBS/OCR"
+    navFeatures:"Возможности", navSetup:"Настройка", navMap:"Карта РБ", navFaq:"FAQ",
+    previewBadge:"Yura RB Monitor • Lineage 2 High Five • BohPts x500",
+    heroTitle:"Карта РБ Л2<br>и таймер рейд-боссов<br><span>без ручных секундомеров</span>",
+    heroLead:"Yura RB Monitor — карта РБ Л2 и raid boss timer для Lineage 2 High Five и BohPts x500. OBS/OCR читает системный чат, запускает таймеры респа, показывает overlay поверх игры и синхронизирует активных рейд-боссов на онлайн-карте.",
+    heroPrimary:"Посмотреть, как работает", download:"Скачать",
+    metricBosses:"рейд-боссов", metricLanguages:"языка интерфейса", metricMap:"синхронизация карты",
+    liveInterface:"Живой интерфейс лаунчера", ocrStatus:"чат распознан", mapStatus:"таймеры синхронизированы", overlayStatus:"поверх игры",
+    whyKicker:"Lineage 2 High Five", whyTitle:"Карта РБ, таймер респа и overlay<br><span>в одном интерфейсе</span>",
+    whyLead:"Вместо ручных секундомеров и скринов — автоматическое OCR-распознавание, raid boss timer и живая карта РБ для High Five, с конфигурацией под BohPts x500.",
+    featureOcrTitle:"OCR системного чата", featureOcrText:"Монитор находит в чате Lineage 2 сообщения о появлении или смерти РБ и запускает соответствующий таймер респа.",
+    featureOverlayTitle:"Игровой overlay", featureOverlayText:"Таймеры рейд-боссов всегда видны поверх клиента. Цвет, масштаб, позиция и размер настраиваются.",
+    featureMapTitle:"Онлайн-карта РБ Л2", featureMapText:"Lineage 2 High Five map показывает активные таймеры, названия боссов, координаты, живой статус и окно респа.",
+    featureEpicTitle:"Эпик и особые события", featureEpicText:"Отдельные сообщения и сценарии для эпик-боссов, Lilith/Anakim и других серверных событий.",
+    workflowKicker:"Быстрая настройка", workflowTitle:"Покажи скрипту чат —<br><span>остальное он сделает сам</span>",
+    workflowLead:"Зона захвата настраивается один раз. Затем OBS/OCR читает нужную часть окна Lineage 2 и автоматически обновляет RB timer и карту.",
+    step1Title:"Запусти игру и OBS", step1Text:"WebSocket работает на стандартном порту 4455.",
+    step2Title:"Выдели системный чат", step2Text:"Укажи X, Y, ширину и высоту области OCR.",
+    step3Title:"Нажми «Запустить»", step3Text:"Таймеры РБ и онлайн-карта обновляются автоматически.",
+    visualGuide:"Визуальная инструкция", chatAreaTitle:"Правильная зона чата", chatAreaText:"В кадре должны быть системные сообщения о РБ.",
+    settingsKicker:"Гибкий overlay", settingsTitle:"Таймер РБ поверх игры<br><span>там, где удобно</span>",
+    detail1Title:"Точное позиционирование", detail1Text:"Координаты и размер задаются численно, поэтому overlay легко поставить в нужный угол.",
+    detail2Title:"Предварительный просмотр", detail2Text:"Проверь результат до запуска монитора и не трать время в игре.",
+    detail3Title:"Поддержка разных разрешений", detail3Text:"Отдельно задаётся размер кадра OBS и зона системного чата.",
+    mapKicker:"Карта РБ Л2", mapTitle:"Lineage 2 High Five карта РБ<br><span>с живыми таймерами респа</span>",
+    mapLead:"Ищи нужного рейд-босса по названию, смотри координаты и следи за активными таймерами с ПК или телефона. Карта ориентирована на High Five и текущую конфигурацию BohPts x500.",
+    hotspotSearch:"Поиск РБ", hotspotTimer:"Активный таймер", hotspotPoint:"Точка на карте",
+    mapBenefit1Title:"Поиск по названию", mapBenefit1Text:"RU и ENG названия рейд-боссов.",
+    mapBenefit2Title:"Состояния цветом", mapBenefit2Text:"Живой, респ и временная точка.",
+    mapBenefit3Title:"Общая синхронизация", mapBenefit3Text:"Данные карты РБ обновляются для всех пользователей.",
+    seoKicker:"BohPts x500 • High Five", seoTitle:"Raid Boss Timer и карта РБ для Lineage 2",
+    seoLead:"Если вы ищете «карта рб л2», «таймер рб л2», «BohPts x500», «raid boss timer» или «Lineage 2 High Five map», Yura RB Monitor объединяет эти функции в одном Windows-лаунчере.",
+    seoCard1Title:"Карта РБ Л2", seoCard1Text:"Онлайн-карта рейд-боссов Lineage 2 High Five с координатами, поиском и текущими таймерами респа.",
+    seoCard2Title:"BohPts x500", seoCard2Text:"Текущая база сообщений, боссов и сценариев монитора настроена под High Five и использование на BohPts x500.",
+    seoCard3Title:"Raid Boss Timer", seoCard3Text:"Автоматический raid boss respawn timer запускается после OCR-распознавания сообщения в системном чате.",
+    languageKicker:"Три языка", languageTitle:"Один инструмент —<br><span>понятный всем</span>",
+    languageLead:"Лаунчер, карта РБ, настройки и основные подсказки доступны на украинском, русском и английском.",
+    faqTitle:"Вопросы перед<br><span>первым запуском</span>", faqLead:"Коротко о том, что нужно для стабильной работы.",
+    faq1Q:"Нужно ли держать OBS открытым?", faq1A:"Да. OBS передаёт изображение системного чата через WebSocket, а монитор распознаёт сообщения OCR.",
+    faq2Q:"Можно изменить положение overlay?", faq2A:"Да. В настройках доступны координаты X/Y, ширина, высота, масштаб и цвет текста.",
+    faq3Q:"Карта РБ работает на телефоне?", faq3A:"Да. Откройте карту на лицензированном ПК, нажмите «Телефон / QR» и отсканируйте одноразовый QR-код. К одной лицензии привязывается один ПК и один мобильный браузер.",
+    faq4Q:"Для какого сервера сделан монитор?", faq4A:"Архитектура рассчитана на Lineage 2 High Five. Текущая конфигурация фраз, боссов и таймеров ориентирована на BohPts x500; база может быть адаптирована под другой сервер.",
+    ctaKicker:"Меньше рутины. Больше игры.", ctaTitle:"Запусти Yura RB Monitor",
+    ctaText:"Установи компоненты, выбери зону чата и запускай Yura RB Monitor одной кнопкой.",
+    downloadNow:"Скачать Yura RB Monitor", footerNote:"Lineage 2 High Five • BohPts x500 • Карта РБ • Raid Boss Timer • OBS/OCR"
   },
   en: {
     navFeatures:"Features", navSetup:"Setup", navMap:"RB Map", navFaq:"FAQ",
-    previewBadge:"Yura RB Monitor вЂў Lineage 2 High Five вЂў BohPts x500",
+    previewBadge:"Yura RB Monitor • Lineage 2 High Five • BohPts x500",
     heroTitle:"Lineage 2 RB map<br>& raid boss timer<br><span>without manual tracking</span>",
     heroLead:"Yura RB Monitor is a Lineage 2 High Five raid boss timer and live RB map for BohPts x500. OBS/OCR reads system-chat events, starts respawn timers, displays an in-game overlay and synchronizes active raid bosses to the online map.",
     heroPrimary:"See how it works", download:"Download",
@@ -107,11 +107,11 @@ const translations = {
     featureOverlayTitle:"In-game overlay", featureOverlayText:"Raid boss timers stay visible above the game client. Color, scale, position and size are configurable.",
     featureMapTitle:"Lineage 2 raid boss map", featureMapText:"The High Five map shows active timers, raid boss names, coordinates, live status and respawn windows.",
     featureEpicTitle:"Epic and special events", featureEpicText:"Dedicated alerts and flows for epic bosses, Lilith/Anakim and other server events.",
-    workflowKicker:"Fast setup", workflowTitle:"Show the script your chat вЂ”<br><span>it handles the rest</span>",
+    workflowKicker:"Fast setup", workflowTitle:"Show the script your chat —<br><span>it handles the rest</span>",
     workflowLead:"Configure the capture region once. OBS/OCR then reads the required Lineage 2 chat area and automatically updates the RB timer and map.",
     step1Title:"Launch the game and OBS", step1Text:"WebSocket uses the standard port 4455.",
     step2Title:"Select the system chat", step2Text:"Set the OCR region X, Y, width and height.",
-    step3Title:"Press вЂњLaunchвЂќ", step3Text:"Raid boss timers and the online map update automatically.",
+    step3Title:"Press “Launch”", step3Text:"Raid boss timers and the online map update automatically.",
     visualGuide:"Visual setup guide", chatAreaTitle:"Correct chat region", chatAreaText:"The frame must include raid boss system messages.",
     settingsKicker:"Flexible overlay", settingsTitle:"Raid boss timers over the game<br><span>exactly where you want them</span>",
     detail1Title:"Precise positioning", detail1Text:"Coordinates and size are numeric, so the overlay is easy to place in any corner.",
@@ -123,39 +123,39 @@ const translations = {
     mapBenefit1Title:"Name search", mapBenefit1Text:"RU and ENG raid boss names.",
     mapBenefit2Title:"Color-coded states", mapBenefit2Text:"Alive, respawn and temporary point.",
     mapBenefit3Title:"Shared synchronization", mapBenefit3Text:"RB map data updates for every user.",
-    seoKicker:"BohPts x500 вЂў High Five", seoTitle:"Lineage 2 High Five raid boss timer & map",
+    seoKicker:"BohPts x500 • High Five", seoTitle:"Lineage 2 High Five raid boss timer & map",
     seoLead:"Yura RB Monitor targets searches such as Lineage 2 raid boss timer, Lineage 2 High Five map, RB map, raid boss respawn timer and BohPts x500 with one practical Windows companion tool.",
     seoCard1Title:"Lineage 2 RB map", seoCard1Text:"Online Lineage 2 High Five raid boss map with coordinates, search and current respawn timers.",
     seoCard2Title:"BohPts x500", seoCard2Text:"The current boss-message database and monitoring scenarios are configured for High Five usage on BohPts x500.",
     seoCard3Title:"Raid Boss Timer", seoCard3Text:"The raid boss respawn timer starts automatically after OCR recognizes a supported system-chat event.",
-    languageKicker:"Three languages", languageTitle:"One tool вЂ”<br><span>clear to everyone</span>",
+    languageKicker:"Three languages", languageTitle:"One tool —<br><span>clear to everyone</span>",
     languageLead:"The launcher, RB map, settings and essential guidance are available in Ukrainian, Russian and English.",
     faqTitle:"Questions before<br><span>your first launch</span>", faqLead:"The essentials required for stable operation.",
     faq1Q:"Does OBS need to stay open?", faq1A:"Yes. OBS provides the system chat image through WebSocket and the monitor recognizes messages with OCR.",
     faq2Q:"Can I move the overlay?", faq2A:"Yes. Settings include X/Y coordinates, width, height, scale and text color.",
-    faq3Q:"Does the RB map work on mobile?", faq3A:"Yes. Open the map on the licensed PC, select вЂњPhone / QRвЂќ and scan the one-time QR code. Each license can link one PC and one mobile browser.",
+    faq3Q:"Does the RB map work on mobile?", faq3A:"Yes. Open the map on the licensed PC, select “Phone / QR” and scan the one-time QR code. Each license can link one PC and one mobile browser.",
     faq4Q:"Which server is the monitor configured for?", faq4A:"The architecture targets Lineage 2 High Five. The current phrases, raid bosses and timer configuration are oriented to BohPts x500 and can be adapted to another server.",
     ctaKicker:"Less routine. More game.", ctaTitle:"Launch Yura RB Monitor",
     ctaText:"Install the components, select the chat region and launch Yura RB Monitor with one button.",
-    downloadNow:"Download Yura RB Monitor", footerNote:"Lineage 2 High Five вЂў BohPts x500 вЂў RB Map вЂў Raid Boss Timer вЂў OBS/OCR"
+    downloadNow:"Download Yura RB Monitor", footerNote:"Lineage 2 High Five • BohPts x500 • RB Map • Raid Boss Timer • OBS/OCR"
   }
 };
 
 const seoMeta = {
   uk: {
-    title:"РљР°СЂС‚Р° Р Р‘ Р›2 BohPts x500 вЂ” Lineage 2 High Five Raid Boss Timer | Yura RB Monitor",
-    description:"РљР°СЂС‚Р° Р Р‘ Р›2 С‚Р° С‚Р°Р№РјРµСЂ СЂРµР№Рґ-Р±РѕСЃС–РІ РґР»СЏ Lineage 2 High Five / BohPts x500. OBS OCR, С‚Р°Р№РјРµСЂ СЂРµСЃРїСѓ, overlay, РєРѕРѕСЂРґРёРЅР°С‚Рё Р±РѕСЃС–РІ С– Р¶РёРІР° РѕРЅР»Р°Р№РЅ-РєР°СЂС‚Р° Р Р‘.",
+    title:"Карта РБ Л2 BohPts x500 — Lineage 2 High Five Raid Boss Timer | Yura RB Monitor",
+    description:"Карта РБ Л2 та таймер рейд-босів для Lineage 2 High Five / BohPts x500. OBS OCR, таймер респу, overlay, координати босів і жива онлайн-карта РБ.",
     canonical:"https://lineage-script.com/",
     image:"https://lineage-script.com/assets/launcher-uk.webp"
   },
   ru: {
-    title:"РљР°СЂС‚Р° Р Р‘ Р›2 BohPts x500 вЂ” С‚Р°Р№РјРµСЂ СЂРµР№Рґ-Р±РѕСЃСЃРѕРІ Lineage 2 High Five | Yura RB Monitor",
-    description:"РљР°СЂС‚Р° Р Р‘ Р›2 Рё С‚Р°Р№РјРµСЂ СЂРµР№Рґ-Р±РѕСЃСЃРѕРІ Lineage 2 High Five РґР»СЏ BohPts x500: OBS OCR, С‚Р°Р№РјРµСЂ СЂРµСЃРїР°, overlay, РєРѕРѕСЂРґРёРЅР°С‚С‹ Р±РѕСЃСЃРѕРІ Рё РѕРЅР»Р°Р№РЅ-РєР°СЂС‚Р° Р Р‘.",
+    title:"Карта РБ Л2 BohPts x500 — таймер рейд-боссов Lineage 2 High Five | Yura RB Monitor",
+    description:"Карта РБ Л2 и таймер рейд-боссов Lineage 2 High Five для BohPts x500: OBS OCR, таймер респа, overlay, координаты боссов и онлайн-карта РБ.",
     canonical:"https://lineage-script.com/ru.html",
     image:"https://lineage-script.com/assets/launcher-ru.webp"
   },
   en: {
-    title:"Lineage 2 High Five Raid Boss Timer & RB Map вЂ” BohPts x500 | Yura RB Monitor",
+    title:"Lineage 2 High Five Raid Boss Timer & RB Map — BohPts x500 | Yura RB Monitor",
     description:"Lineage 2 High Five raid boss timer and live RB map for BohPts x500 with OBS OCR, respawn timers, in-game overlay, boss coordinates and synchronized map status.",
     canonical:"https://lineage-script.com/en.html",
     image:"https://lineage-script.com/assets/launcher-en.webp"
@@ -264,8 +264,8 @@ function setSeoMeta(lang) {
     "image":meta.image,
     "description":meta.description,
     "keywords":[
-      "РєР°СЂС‚Р° Р Р‘ Р›2",
-      "С‚Р°Р№РјРµСЂ Р Р‘ Р›2",
+      "карта РБ Л2",
+      "таймер РБ Л2",
       "Lineage 2 High Five map",
       "Lineage 2 raid boss timer",
       "raid boss respawn timer",
@@ -287,32 +287,29 @@ function installSeoSection() {
   section.innerHTML = `
     <div class="shell">
       <div class="section-heading reveal">
-        <p class="kicker" data-i18n="seoKicker">BohPts x500 вЂў High Five</p>
-        <h2 data-i18n="seoTitle">Raid Boss Timer С‚Р° РєР°СЂС‚Р° Р Р‘ РґР»СЏ Lineage 2</h2>
-        <p data-i18n="seoLead">РљР°СЂС‚Р° Р Р‘ Р›2, raid boss timer, Lineage 2 High Five map С‚Р° BohPts x500 РІ РѕРґРЅРѕРјСѓ Windows-С–РЅСЃС‚СЂСѓРјРµРЅС‚С–.</p>
+        <p class="kicker" data-i18n="seoKicker">BohPts x500 • High Five</p>
+        <h2 data-i18n="seoTitle">Raid Boss Timer та карта РБ для Lineage 2</h2>
+        <p data-i18n="seoLead">Карта РБ Л2, raid boss timer, Lineage 2 High Five map та BohPts x500 в одному Windows-інструменті.</p>
       </div>
       <div class="feature-grid">
         <article class="feature-card reveal tilt">
-          <div class="icon-shell">вЊ–</div>
-          <h3 data-i18n="seoCard1Title">РљР°СЂС‚Р° Р Р‘ Р›2</h3>
-          <p data-i18n="seoCard1Text">РћРЅР»Р°Р№РЅ-РєР°СЂС‚Р° СЂРµР№Рґ-Р±РѕСЃС–РІ Lineage 2 High Five.</p>
+          <div class="icon-shell">⌖</div>
+          <h3 data-i18n="seoCard1Title">Карта РБ Л2</h3>
+          <p data-i18n="seoCard1Text">Онлайн-карта рейд-босів Lineage 2 High Five.</p>
           <span class="feature-index">RB</span>
-          <span class="seo-more">Докладніше →</span>
-        </a>
-        <a class="feature-card seo-link-card reveal delay-1 tilt" href="/bohpts-x500-rb-timer.html">
-          <div class="icon-shell">Г—500</div>
+        </article>
+        <article class="feature-card reveal delay-1 tilt">
+          <div class="icon-shell">×500</div>
           <h3 data-i18n="seoCard2Title">BohPts x500</h3>
-          <p data-i18n="seoCard2Text">РљРѕРЅС„С–РіСѓСЂР°С†С–СЏ РїС–Рґ High Five С‚Р° BohPts x500.</p>
+          <p data-i18n="seoCard2Text">Конфігурація під High Five та BohPts x500.</p>
           <span class="feature-index">L2</span>
-          <span class="seo-more">BohPts x500 →</span>
-        </a>
-        <a class="feature-card seo-link-card reveal delay-2 tilt" href="/lineage2-rb-map.html">
-          <div class="icon-shell">вЏ±</div>
+        </article>
+        <article class="feature-card reveal delay-2 tilt">
+          <div class="icon-shell">⏱</div>
           <h3 data-i18n="seoCard3Title">Raid Boss Timer</h3>
-          <p data-i18n="seoCard3Text">РђРІС‚РѕРјР°С‚РёС‡РЅРёР№ С‚Р°Р№РјРµСЂ СЂРµСЃРїСѓ РїС–СЃР»СЏ OCR-РїРѕРґС–С—.</p>
+          <p data-i18n="seoCard3Text">Автоматичний таймер респу після OCR-події.</p>
           <span class="feature-index">T</span>
-          <span class="seo-more">Raid Boss Map →</span>
-        </a>
+        </article>
       </div>
     </div>`;
   faq.parentNode.insertBefore(section, faq);
@@ -349,6 +346,61 @@ document.querySelectorAll('a[href*="/releases/latest/download/YuraRBMonitor_Clie
 });
 
 installSeoSection();
+
+(function installLandingLinks() {
+  const section = document.getElementById("seo-lineage2");
+  if (!section || document.getElementById("seoLandingLinks")) return;
+
+  const grid = section.querySelector(".feature-grid");
+  if (!grid) return;
+
+  const cards = grid.querySelectorAll(".feature-card");
+
+  const links = [
+    {
+      href: "/lineage2-rb-map.html",
+      label: "Карта РБ Л2 →"
+    },
+    {
+      href: "/bohpts-x500-rb-timer.html",
+      label: "BohPts x500 →"
+    },
+    {
+      href: "/lineage2-rb-map.html",
+      label: "Raid Boss Map →"
+    }
+  ];
+
+  cards.forEach((card, index) => {
+    const info = links[index];
+    if (!info) return;
+
+    card.classList.add("seo-link-card");
+
+    const a = document.createElement("a");
+    a.href = info.href;
+    a.className = "seo-more";
+    a.textContent = info.label;
+
+    card.appendChild(a);
+  });
+
+  const row = document.createElement("div");
+  row.id = "seoLandingLinks";
+  row.className = "seo-landing-links";
+
+  row.innerHTML = `
+    <a href="/lineage2-rb-map.html">
+      Lineage 2 High Five RB Map
+    </a>
+
+    <a href="/bohpts-x500-rb-timer.html">
+      BohPts x500 Raid Boss Timer
+    </a>
+  `;
+
+  grid.after(row);
+})();
 
 langButtons.forEach(btn => btn.addEventListener("click", () => setLanguage(btn.dataset.lang)));
 const queryLang = new URLSearchParams(window.location.search).get("lang");
