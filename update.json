@@ -2,7 +2,7 @@
   "version": "v1.19",
   "min_supported_version": "v1.17",
   "force_update": true,
-  "download_url": "https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_v1.19.zip",
+  "download_url": "https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_latest.zip",
   "notes_uk": "v1.19: виправлено визначення появи Ліліт/Анакім, 5-хвилинний live-таймер, захист від повторного OCR, Startup OCR Prime більше не блокує справжню появу боса. Оновлено стандартні параметри оверлею та посилання на lineage-script.com.",
   "notes_ru": "v1.19: исправлено определение появления Лилит/Анаким, 5-минутный live-таймер, защита от повторного OCR, Startup OCR Prime больше не блокирует реальное появление босса. Обновлены стандартные параметры оверлея и ссылки на lineage-script.com.",
   "notes_en": "v1.19: fixed Lilith/Anakim live detection, added the 5-minute live timer, duplicate OCR protection, and fixed Startup OCR Prime blocking real boss spawns. Updated default overlay settings and lineage-script.com links.",
