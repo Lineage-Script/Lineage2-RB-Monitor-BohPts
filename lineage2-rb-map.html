@@ -3,393 +3,121 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Карта РБ Л2 — Lineage 2 High Five Raid Boss Map | Yura RB Monitor</title>
-
-  <meta name="description"
-        content="Онлайн карта РБ Л2 для Lineage 2 High Five: пошук рейд-босів, координати, live-статуси, таймери респу та синхронізація через Yura RB Monitor.">
-
-  <meta name="robots" content="index,follow,max-image-preview:large">
-
-  <link rel="canonical"
-        href="https://lineage-script.com/lineage2-rb-map.html">
-
-  <link rel="alternate" hreflang="uk"
-        href="https://lineage-script.com/lineage2-rb-map.html">
-
-  <link rel="alternate" hreflang="x-default"
-        href="https://lineage-script.com/lineage2-rb-map.html">
-
+  <meta name="description" content="Онлайн карта РБ Л2 для Lineage 2 High Five: координати, пошук рейд-босів, live-статуси, таймери респу та синхронізація через Yura RB Monitor.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <link rel="canonical" href="https://lineage-script.com/lineage2-rb-map.html">
+  <link rel="alternate" hreflang="uk" href="https://lineage-script.com/lineage2-rb-map.html">
+  <link rel="alternate" hreflang="x-default" href="https://lineage-script.com/lineage2-rb-map.html">
   <link rel="icon" type="image/png" href="./assets/favicon.png">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./seo-landing.css">
   <meta property="og:type" content="website">
-  <meta property="og:title"
-        content="Карта РБ Л2 — Lineage 2 High Five Raid Boss Map">
-  <meta property="og:description"
-        content="Жива карта рейд-босів Lineage 2 High Five: координати, пошук РБ, статуси та таймери респу.">
-  <meta property="og:url"
-        content="https://lineage-script.com/lineage2-rb-map.html">
-  <meta property="og:image"
-        content="https://lineage-script.com/assets/map-en.webp">
-
+  <meta property="og:site_name" content="Yura RB Monitor">
+  <meta property="og:title" content="Карта РБ Л2 — Lineage 2 High Five Raid Boss Map">
+  <meta property="og:description" content="Жива карта рейд-босів Lineage 2 High Five: координати, пошук, статуси та таймери респу.">
+  <meta property="og:url" content="https://lineage-script.com/lineage2-rb-map.html">
+  <meta property="og:image" content="https://lineage-script.com/assets/map-en.webp">
   <meta name="twitter:card" content="summary_large_image">
-
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Yura RB Monitor",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Windows",
-    "url": "https://lineage-script.com/",
-    "downloadUrl": "https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_latest.zip",
-    "description": "Lineage 2 High Five raid boss timer, live RB map, OBS OCR detection and in-game overlay."
-  }
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Yura RB Monitor","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 10, Windows 11","url":"https://lineage-script.com/","downloadUrl":"https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_latest.zip","description":"Lineage 2 High Five raid boss timer, live RB map, OBS OCR detection and in-game overlay."}
   </script>
-
-  <style>
-    :root {
-      --bg:#090806;
-      --panel:#11100d;
-      --panel2:#17140f;
-      --gold:#d8a84f;
-      --gold2:#f2d28d;
-      --text:#f3ead7;
-      --muted:#b8ad99;
-      --line:#6c5228;
-    }
-
-    * { box-sizing:border-box; }
-
-    body {
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at 50% 0%, #2a1b09 0, transparent 32%),
-        var(--bg);
-      line-height:1.65;
-    }
-
-    a { color:var(--gold2); }
-
-    .shell {
-      width:min(1120px, calc(100% - 36px));
-      margin:auto;
-    }
-
-    header {
-      border-bottom:1px solid #332614;
-      background:rgba(5,5,4,.92);
-      position:sticky;
-      top:0;
-      z-index:5;
-      backdrop-filter:blur(12px);
-    }
-
-    nav {
-      min-height:70px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .brand {
-      display:flex;
-      align-items:center;
-      gap:12px;
-      color:var(--gold2);
-      text-decoration:none;
-      font-weight:700;
-      font-size:19px;
-    }
-
-    .brand img {
-      width:38px;
-      height:38px;
-      object-fit:contain;
-    }
-
-    .navlinks {
-      display:flex;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .navlinks a {
-      text-decoration:none;
-      color:#d9cdb8;
-    }
-
-    .hero {
-      padding:80px 0 50px;
-      text-align:center;
-    }
-
-    .eyebrow {
-      color:var(--gold);
-      text-transform:uppercase;
-      letter-spacing:.13em;
-      font-size:13px;
-      font-weight:700;
-    }
-
-    h1 {
-      margin:16px auto;
-      max-width:950px;
-      font-family:Georgia,serif;
-      font-size:clamp(36px,6vw,68px);
-      line-height:1.08;
-      color:var(--gold2);
-    }
-
-    .lead {
-      max-width:850px;
-      margin:0 auto 30px;
-      color:var(--muted);
-      font-size:19px;
-    }
-
-    .buttons {
-      display:flex;
-      gap:14px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin:30px 0;
-    }
-
-    .btn {
-      display:inline-block;
-      padding:14px 22px;
-      border:1px solid var(--gold);
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:700;
-    }
-
-    .btn.primary {
-      background:linear-gradient(135deg,#6c4312,#b77922);
-      color:#fff4d4;
-    }
-
-    .screenshot {
-      margin:35px auto;
-      overflow:hidden;
-      border:1px solid var(--line);
-      border-radius:18px;
-      background:#080706;
-      box-shadow:0 25px 80px rgba(0,0,0,.5);
-    }
-
-    .screenshot img {
-      display:block;
-      width:100%;
-      height:auto;
-    }
-
-    section { padding:45px 0; }
-
-    h2 {
-      font-family:Georgia,serif;
-      color:var(--gold2);
-      font-size:34px;
-      margin-bottom:15px;
-    }
-
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-    }
-
-    .card {
-      padding:24px;
-      border:1px solid #4b381d;
-      border-radius:14px;
-      background:linear-gradient(180deg,var(--panel2),var(--panel));
-    }
-
-    .card h3 {
-      color:var(--gold2);
-      margin-top:0;
-    }
-
-    .seo-text {
-      max-width:900px;
-      margin:auto;
-    }
-
-    footer {
-      margin-top:40px;
-      padding:30px 0;
-      border-top:1px solid #332614;
-      color:#908774;
-      text-align:center;
-    }
-
-    @media(max-width:760px) {
-      .grid { grid-template-columns:1fr; }
-      nav { align-items:flex-start; padding:16px 0; flex-direction:column; }
-      .hero { padding-top:50px; }
-    }
-  </style>
 </head>
-
 <body>
-
-<header>
-  <div class="shell">
-    <nav>
+  <header class="site-header">
+    <div class="shell header-inner">
       <a class="brand" href="/">
-        <img src="./assets/favicon.png" alt="Yura RB Monitor">
-        Yura RB Monitor
+        <span class="brand-mark"><img src="./assets/favicon.png" alt=""></span>
+        <span class="brand-copy"><strong>Yura RB Monitor</strong><small>Lineage Script</small></span>
       </a>
-
-      <div class="navlinks">
+      <nav class="main-nav" aria-label="Навігація">
         <a href="/">Головна</a>
         <a href="/#map">Карта РБ</a>
         <a href="/bohpts-x500-rb-timer.html">BohPts x500</a>
+        <a class="nav-download" href="https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_latest.zip">Завантажити</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><i></i> Lineage 2 High Five • Live RB Map</div>
+          <h1>Карта РБ Л2 <span class="accent">з живими таймерами респу</span></h1>
+          <p class="hero-lead">Yura RB Monitor поєднує онлайн-карту рейд-босів, координати, пошук за назвою та активні respawn timers для Lineage 2 High Five. Дані монітора синхронізуються з картою, щоб потрібний Raid Boss був перед очима без ручних записів.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_latest.zip">Завантажити Yura RB Monitor</a>
+            <a class="btn btn-ghost" href="/#map">Подивитися карту РБ</a>
+          </div>
+          <div class="hero-points">
+            <div><strong>50+</strong><span>рейд-босів</span></div>
+            <div><strong>LIVE</strong><span>синхронізація</span></div>
+            <div><strong>High Five</strong><span>Lineage 2</span></div>
+          </div>
+        </div>
+
+        <div class="visual">
+          <div class="window">
+            <div class="window-bar"><span></span><span></span><span></span><b>Yura RB Monitor • Live RB Map</b></div>
+            <img src="./assets/map-en.webp" alt="Карта РБ Л2 Lineage 2 High Five Raid Boss Map Yura RB Monitor">
+          </div>
+          <div class="visual-note"><strong>LIVE MAP</strong><small>координати • пошук • respawn</small></div>
+        </div>
       </div>
-    </nav>
-  </div>
-</header>
+    </section>
 
-<main>
+    <section class="section">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="kicker">Карта рейд-босів</p>
+          <h2>Що дає <span class="accent">Lineage 2 RB Map</span></h2>
+          <p>Один екран для пошуку боса, координат і поточного стану таймера — без окремих таблиць, секундомірів та скрінів.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-icon">⌖</div><h3>Координати РБ</h3><p>Пошук Raid Boss на карті High Five з назвами, точками розташування та швидким переходом до потрібної локації.</p></article>
+          <article class="card"><div class="card-icon">⏱</div><h3>Таймер респу</h3><p>Активні respawn timers показують, коли очікувати появу боса, без ручних секундомірів та записів.</p></article>
+          <article class="card"><div class="card-icon">↻</div><h3>Live-синхронізація</h3><p>Таймери з Yura RB Monitor синхронізуються з онлайн-картою та оновлюють актуальний стан для користувачів.</p></article>
+        </div>
+      </div>
+    </section>
 
-<section class="hero">
-  <div class="shell">
+    <section class="section">
+      <div class="shell content-grid">
+        <article class="article">
+          <p class="kicker">Lineage 2 High Five map</p>
+          <h2>Карта РБ, яка працює разом із <span class="accent">Raid Boss Timer</span></h2>
+          <p>Якщо ви шукаєте <strong>карту РБ Л2</strong>, <strong>Lineage 2 High Five map</strong>, <strong>Raid Boss Map</strong> або координати рейд-босів, Yura RB Monitor об’єднує ці задачі в одному інтерфейсі.</p>
+          <p>OBS та OCR розпізнають підтримувані повідомлення системного чату, після чого монітор запускає відповідний <strong>raid boss respawn timer</strong>. Таймер відображається поверх гри та може синхронізуватися з онлайн-картою.</p>
+          <p>Поточна конфігурація орієнтована на <strong>Lineage 2 High Five</strong> і використання на <strong>BohPts x500</strong>.</p>
+        </article>
+        <aside class="side-panel">
+          <h3>Пов’язані сторінки</h3>
+          <div class="link-list">
+            <a href="/bohpts-x500-rb-timer.html"><span>BohPts x500 — таймер РБ</span><span>→</span></a>
+            <a href="/"><span>Yura RB Monitor — головна</span><span>→</span></a>
+            <a href="/#map"><span>Жива карта на головній</span><span>→</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-    <div class="eyebrow">
-      Lineage 2 High Five • Raid Boss Map • Live RB
+    <section class="cta">
+      <div class="shell cta-panel">
+        <div class="cta-logo"><img src="./assets/favicon.png" alt=""></div>
+        <div class="cta-copy"><p class="kicker">Менше рутини. Більше гри.</p><h2>Запусти карту РБ і таймери Lineage 2</h2><p>Встанови Yura RB Monitor, налаштуй OCR один раз і працюй з картою та respawn timers в одному середовищі.</p></div>
+        <a class="btn btn-primary" href="https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_latest.zip">Завантажити</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>Yura RB Monitor • Lineage 2 High Five • Карта РБ • Raid Boss Timer</span>
+      <div class="footer-links"><a href="/">Головна</a><a href="/bohpts-x500-rb-timer.html">BohPts x500</a></div>
     </div>
-
-    <h1>
-      Карта РБ Л2 — онлайн Raid Boss Map для Lineage 2 High Five
-    </h1>
-
-    <p class="lead">
-      Yura RB Monitor поєднує карту РБ Л2, пошук рейд-босів,
-      координати, таймери респу та live-статуси.
-      Дані активних таймерів синхронізуються з онлайн-картою,
-      щоб швидше знаходити потрібного Raid Boss у Lineage 2 High Five.
-    </p>
-
-    <div class="buttons">
-
-      <a class="btn primary"
-         href="https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_latest.zip">
-        Завантажити Yura RB Monitor
-      </a>
-
-      <a class="btn" href="/#map">
-        Подивитися карту РБ
-      </a>
-
-    </div>
-
-    <div class="screenshot">
-      <img src="./assets/map-en.webp"
-           alt="Карта РБ Л2 Lineage 2 High Five Raid Boss Map Yura RB Monitor">
-    </div>
-
-  </div>
-</section>
-
-
-<section>
-  <div class="shell">
-
-    <h2>Що показує карта РБ Lineage 2</h2>
-
-    <div class="grid">
-
-      <article class="card">
-        <h3>Координати РБ</h3>
-        <p>
-          Швидкий пошук Raid Boss на карті Lineage 2 High Five
-          з точками розташування та назвами босів.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Таймер респу</h3>
-        <p>
-          Активні таймери допомагають бачити стан респу РБ
-          без окремих секундомірів і ручних записів.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Live RB Map</h3>
-        <p>
-          Дані Yura RB Monitor синхронізуються з онлайн-картою,
-          тому актуальні таймери доступні в одному інтерфейсі.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-
-<section>
-  <div class="shell seo-text">
-
-    <h2>Lineage 2 High Five Raid Boss Map</h2>
-
-    <p>
-      Якщо ви шукаєте <strong>карту РБ Л2</strong>,
-      <strong>Lineage 2 High Five map</strong>,
-      <strong>Raid Boss Map</strong> або координати рейд-босів,
-      Yura RB Monitor об'єднує ці функції з автоматичними таймерами.
-    </p>
-
-    <p>
-      OBS та OCR розпізнають повідомлення системного чату,
-      після чого програма запускає відповідний
-      <strong>raid boss respawn timer</strong>.
-      Таймер відображається в overlay та може синхронізуватися
-      з онлайн-картою РБ.
-    </p>
-
-    <p>
-      Окремий режим налаштований для Lineage 2 High Five
-      і використовується також гравцями, які шукають
-      інформацію про РБ на <strong>BohPts x500</strong>.
-    </p>
-
-  </div>
-</section>
-
-
-<section>
-  <div class="shell seo-text">
-
-    <h2>Пов'язані сторінки</h2>
-
-    <p>
-      <a href="/bohpts-x500-rb-timer.html">
-        BohPts x500 — таймер РБ та Raid Boss Timer
-      </a>
-    </p>
-
-    <p>
-      <a href="/">
-        Yura RB Monitor — головна сторінка
-      </a>
-    </p>
-
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="shell">
-    Yura RB Monitor • Lineage 2 High Five • карта РБ Л2 • Raid Boss Timer
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>
