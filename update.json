@@ -1,10 +1,10 @@
 {
-  "version": "v1.19",
+  "version": "v1.20",
   "min_supported_version": "v1.17",
   "force_update": true,
   "download_url": "https://github.com/Lineage-Script/Lineage2-RB-Monitor-BohPts/releases/latest/download/YuraRBMonitor_Client_latest.zip",
-  "notes_uk": "v1.19: виправлено визначення появи Ліліт/Анакім, 5-хвилинний live-таймер, захист від повторного OCR, Startup OCR Prime більше не блокує справжню появу боса. Оновлено стандартні параметри оверлею та посилання на lineage-script.com.",
-  "notes_ru": "v1.19: исправлено определение появления Лилит/Анаким, 5-минутный live-таймер, защита от повторного OCR, Startup OCR Prime больше не блокирует реальное появление босса. Обновлены стандартные параметры оверлея и ссылки на lineage-script.com.",
-  "notes_en": "v1.19: fixed Lilith/Anakim live detection, added the 5-minute live timer, duplicate OCR protection, and fixed Startup OCR Prime blocking real boss spawns. Updated default overlay settings and lineage-script.com links.",
+  "notes_uk": "v1.20: додано вибір серверів BohPts x500 Old / x500 New / x7, виправлено запуск монітора зі скомпільованого Nuitka-лаунчера, оновлено Startup OCR Prime для ігнорування старих повідомлень у чаті без втрати нових появ РБ, додано попередження перед встановленням компонентів про запуск від імені адміністратора та необхідні галочки інсталяторів. Реліз перевірено через SHA-256, requirements.txt та повний inventory файлів.",
+  "notes_ru": "v1.20: добавлен выбор серверов BohPts x500 Old / x500 New / x7, исправлен запуск монитора из скомпилированного Nuitka-лаунчера, обновлен Startup OCR Prime для игнорирования старых сообщений в чате без потери новых появлений РБ, добавлено предупреждение перед установкой компонентов о запуске от имени администратора и необходимых галочках установщиков. Релиз проверен через SHA-256, requirements.txt и полный inventory файлов.",
+  "notes_en": "v1.20: added BohPts x500 Old / x500 New / x7 server selection, fixed monitor launch from the compiled Nuitka launcher, updated Startup OCR Prime so old visible chat messages are ignored without suppressing newly appearing raid bosses, and added an installation warning about running as Administrator and keeping required installer options enabled. The release is verified with SHA-256, requirements.txt, and a full file inventory.",
   "required": true
 }
