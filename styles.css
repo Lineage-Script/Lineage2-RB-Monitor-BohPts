@@ -652,3 +652,8 @@ h1 span,h2 span{
     min-height:220px;
   }
 }
+
+/* Raid Boss Guide feature, 2026-10 */
+.rb-guide-promo{margin:24px auto 0;padding:22px 24px;border:1px solid rgba(67,237,212,.32);border-radius:18px;background:linear-gradient(115deg,rgba(15,39,50,.86),rgba(15,14,32,.87));display:flex;gap:20px;align-items:center;justify-content:space-between;box-shadow:0 18px 50px rgba(0,0,0,.18)}
+.rb-guide-promo-copy{display:flex;align-items:flex-start;gap:17px;max-width:740px}.rb-guide-promo-icon{flex:0 0 44px;width:44px;height:44px;border:1px solid rgba(67,237,212,.38);border-radius:12px;display:grid;place-items:center;font-size:27px;color:#42ead9}.rb-guide-promo-copy strong{font-size:1.13rem;color:#eafffb}.rb-guide-promo-copy p{margin:.5rem 0 0;color:#c1cddd;line-height:1.6}.rb-guide-promo-link{flex-shrink:0;text-decoration:none;padding:13px 17px;border:1px solid rgba(67,237,212,.5);border-radius:10px;background:#0b2831;color:#bbfff2;font-weight:700;transition:transform .2s ease,background .2s ease}.rb-guide-promo-link:hover,.rb-guide-promo-link:focus-visible{background:#134453;transform:translateY(-2px)}
+@media(max-width:760px){.rb-guide-promo{flex-direction:column;align-items:stretch;padding:18px}.rb-guide-promo-link{text-align:center}.rb-guide-promo-copy{gap:10px}}
