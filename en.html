@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=rb-atlas-20261014">
 </head>
 <body>
   <div class="page-noise" aria-hidden="true"></div>
@@ -286,21 +286,55 @@
               <img src="./assets/map-ru.webp" alt="Yura RB Control — interactive raid boss map" loading="lazy" decoding="async">
               <div class="rb-atlas-map-fade" aria-hidden="true"></div>
             </div>
-            <div class="rb-atlas-sample">
-              <div class="rb-atlas-sample-head">
-                <span class="rb-atlas-boss-symbol" aria-hidden="true">♛</span>
-                <div class="rb-atlas-sample-titles">
-                  <span class="rb-atlas-eyebrow" data-i18n="atlasCardLabel">ПРИКЛАД КАРТКИ РБ</span>
-                  <strong data-i18n="atlasBossName">Айнхалдер фон Хельман</strong>
-                  <small>Eilhalder von Hellmann</small>
+            <div class="rb-atlas-showcase" aria-label="Raid Boss guide examples">
+              <div class="rb-atlas-showcase-top">
+                <span class="rb-atlas-showcase-label" data-i18n="atlasChooseBoss">ПЕРЕГЛЯНЬ КАРТКИ РБ</span>
+                <div class="rb-atlas-tabs" role="tablist" aria-label="Raid Boss">
+                  <button class="rb-atlas-tab" type="button" id="rb-tab-hellmann" role="tab" data-rb-atlas-tab="hellmann" aria-selected="true" aria-controls="rb-panel-hellmann" data-i18n="atlasTabHellmann">Хельман</button>
+                  <button class="rb-atlas-tab" type="button" id="rb-tab-kelone" role="tab" data-rb-atlas-tab="kelone" aria-selected="false" aria-controls="rb-panel-kelone" tabindex="-1" data-i18n="atlasTabKelone">Келона</button>
+                  <button class="rb-atlas-tab" type="button" id="rb-tab-behemoth" role="tab" data-rb-atlas-tab="behemoth" aria-selected="false" aria-controls="rb-panel-behemoth" tabindex="-1" data-i18n="atlasTabBehemoth">Бехимос</button>
                 </div>
-                <span class="rb-atlas-level">LV. 71</span>
               </div>
-              <div class="rb-atlas-sample-rows">
-                <div><span data-i18n="atlasSampleLocationLabel">Локація</span><strong data-i18n="atlasSampleLocation">Прокляте село</strong></div>
-                <div><span data-i18n="atlasSampleTeleportLabel">Телепорт</span><strong>Rune → Forest of the Dead</strong></div>
-              </div>
-              <div class="rb-atlas-sample-footer" data-i18n="atlasSampleFooter">Фото боса · Маршрут · YouTube-гайд</div>
+              <article class="rb-atlas-panel" id="rb-panel-hellmann" data-rb-atlas-panel="hellmann" role="tabpanel" aria-labelledby="rb-tab-hellmann">
+                <div class="rb-atlas-portrait"><img src="./assets/rb-preview-hellmann.svg" alt="Eilhalder von Hellmann — original game screenshot" loading="lazy" width="300" height="225"></div>
+                <div class="rb-atlas-panel-body">
+                  <span class="rb-atlas-eyebrow" data-i18n="atlasCardLabel">ПРИКЛАД КАРТКИ РБ</span>
+                  <h3 data-i18n="atlasBossName">Айнхалдер фон Хельман</h3>
+                  <div class="rb-atlas-subtitle">Eilhalder von Hellmann <span class="rb-atlas-level">LV. 71</span></div>
+                  <div class="rb-atlas-details">
+                    <div><span data-i18n="atlasSampleLocationLabel">Локація</span><b data-i18n="atlasSampleLocation">Прокляте село</b></div>
+                    <div><span data-i18n="atlasSampleTeleportLabel">Телепорт</span><b>Rune → Forest of the Dead</b></div>
+                  </div>
+                  <p class="rb-atlas-walk" data-i18n="atlasWalkHellmann">З'являється лише вночі за ігровим часом. Від Forest of the Dead прямуй до Cursed Village.</p>
+                </div>
+              </article>
+              <article class="rb-atlas-panel" id="rb-panel-kelone" data-rb-atlas-panel="kelone" role="tabpanel" aria-labelledby="rb-tab-kelone" hidden>
+                <div class="rb-atlas-portrait"><img src="./assets/rb-preview-kelone.svg" alt="Kernon's Faithful Servant Kelone — original game screenshot" loading="lazy" width="300" height="225"></div>
+                <div class="rb-atlas-panel-body">
+                  <span class="rb-atlas-eyebrow" data-i18n="atlasCardLabel">ПРИКЛАД КАРТКИ РБ</span>
+                  <h3 data-i18n="atlasBossKelone">Відьма Келона</h3>
+                  <div class="rb-atlas-subtitle">Kernon's Faithful Servant Kelone</div>
+                  <div class="rb-atlas-details">
+                    <div><span data-i18n="atlasSampleLocationLabel">Локація</span><b data-i18n="atlasLocationKelone">Розпечені Топі</b></div>
+                    <div><span data-i18n="atlasSampleTeleportLabel">Телепорт</span><b>Aden → Blazing Swamp</b></div>
+                  </div>
+                  <p class="rb-atlas-walk" data-i18n="atlasWalkKelone">Спустися до лавової низини, тримайся правого схилу та рухайся до місця появи боса.</p>
+                </div>
+              </article>
+              <article class="rb-atlas-panel" id="rb-panel-behemoth" data-rb-atlas-panel="behemoth" role="tabpanel" aria-labelledby="rb-tab-behemoth" hidden>
+                <div class="rb-atlas-portrait"><img src="./assets/rb-preview-behemoth.svg" alt="Behemoth Leader — original game screenshot" loading="lazy" width="300" height="225"></div>
+                <div class="rb-atlas-panel-body">
+                  <span class="rb-atlas-eyebrow" data-i18n="atlasCardLabel">ПРИКЛАД КАРТКИ РБ</span>
+                  <h3 data-i18n="atlasBossBehemoth">Глава Бехимосів</h3>
+                  <div class="rb-atlas-subtitle">Behemoth Leader</div>
+                  <div class="rb-atlas-details">
+                    <div><span data-i18n="atlasSampleLocationLabel">Локація</span><b>Antharas Lair</b></div>
+                    <div><span data-i18n="atlasSampleTeleportLabel">Телепорт</span><b>Giran / Hunters Village → Antharas Lair</b></div>
+                  </div>
+                  <p class="rb-atlas-walk" data-i18n="atlasWalkBehemoth">На першому рівні Lair рухайся прямо, на розвилці праворуч, а потім ліворуч через кістяний прохід.</p>
+                </div>
+              </article>
+              <div class="rb-atlas-showcase-footer"><span data-i18n="atlasShowcaseFoot">Скриншоти з гри · 72 картки · RU / EN · маршрути · відео</span><span aria-hidden="true">↗</span></div>
             </div>
           </div>
           <div class="rb-atlas-info reveal delay-1">
@@ -342,6 +376,11 @@
             <h3 data-i18n="trustTitle">Зовнішній інформаційний монітор, не ігровий бот</h3>
             <p data-i18n="trustText">За описаною архітектурою Yura RB Monitor розпізнає видимий системний чат із відеопотоку OBS та веде таймери без потреби читати пам’ять гри, вводити код у клієнт чи керувати персонажем. Водночас це не гарантія відсутності блокування: правила конкретного сервера й рішення античіта можуть відрізнятися.</p>
           </div>
+          <div class="rb-trust-chips" aria-label="Monitoring architecture">
+              <span data-i18n="trustPillOne">OBS / OCR зображення чату</span>
+              <span data-i18n="trustPillTwo">Без інжекції в клієнт</span>
+              <span data-i18n="trustPillThree">Без керування персонажем</span>
+            </div>
         </div>
       </div>
     </section>
@@ -428,6 +467,6 @@
     <img id="lightboxImage" alt="">
   </div>
 
-  <script src="./app.js"></script>
+  <script src="./app.js?v=rb-atlas-20261014"></script>
 </body>
 </html>
