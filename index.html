@@ -37,6 +37,7 @@
         <a href="#features" data-i18n="navFeatures">Можливості</a>
         <a href="#workflow" data-i18n="navSetup">Налаштування</a>
         <a href="#map" data-i18n="navMap">Карта РБ</a>
+        <a href="#rb-guide" data-i18n="navGuide">Довідник РБ</a>
         <a href="#faq" data-i18n="navFaq">FAQ</a>
       </nav>
 
@@ -263,15 +264,85 @@
           <div class="reveal delay-1"><strong data-i18n="mapBenefit2Title">Стани кольорами</strong><span data-i18n="mapBenefit2Text">Живий, респ та тимчасова точка.</span></div>
           <div class="reveal delay-2"><strong data-i18n="mapBenefit3Title">Спільна синхронізація</strong><span data-i18n="mapBenefit3Text">Дані оновлюються для всіх користувачів.</span></div>
         </div>
-        <div class="rb-guide-promo reveal" aria-label="Raid boss location guide">
-          <div class="rb-guide-promo-copy">
-            <span class="rb-guide-promo-icon" aria-hidden="true">⌖</span>
-            <div>
-              <strong data-i18n="guidePromoTitle">Фото рейд-боса, телепорт, маршрут і відео</strong>
-              <p data-i18n="guidePromoText">Вибери рейд-боса на карті Lineage 2 High Five: переглянь його зображення, рівень (якщо відомий), назви англійською та російською, локацію, точку телепорту, покроковий маршрут і YouTube-гайд за наявності.</p>
+
+      </div>
+    </section>
+
+    <!-- RAID BOSS ATLAS · in-game screenshots, routes and video guides -->
+    <section class="section rb-atlas-section" id="rb-guide" aria-labelledby="rb-atlas-title">
+      <div class="rb-atlas-aura" aria-hidden="true"></div>
+      <div class="shell">
+        <div class="section-heading reveal rb-atlas-heading">
+          <p class="kicker" data-i18n="atlasKicker">НОВА ФУНКЦІЯ · YURA RB CONTROL</p>
+          <h2 id="rb-atlas-title" data-i18n-html="atlasTitle">72 рейд-боси.<br><span>Від маркера — до маршруту.</span></h2>
+          <p data-i18n="atlasLead">Натисни на будь-якого РБ на онлайн-карті та відкрий його довідник: ігровий скриншот, назви RU / EN, локація, телепорт, як дістатися і відео за наявності.</p>
+        </div>
+        <div class="rb-atlas-layout">
+          <div class="rb-atlas-stage reveal" aria-label="Попередній перегляд онлайн-карти РБ">
+            <div class="rb-atlas-stage-top">
+              <span class="rb-atlas-live"><span></span> YURA RB CONTROL</span>
+              <span class="rb-atlas-stage-counter" data-i18n="atlasPreviewTag">ПРИКЛАД ІНТЕРФЕЙСУ</span>
+            </div>
+            <div class="rb-atlas-map-wrap" data-lang-image="map">
+              <img src="./assets/map-ru.webp" alt="Yura RB Control — interactive raid boss map" loading="lazy" decoding="async">
+              <div class="rb-atlas-map-fade" aria-hidden="true"></div>
+            </div>
+            <div class="rb-atlas-sample">
+              <div class="rb-atlas-sample-head">
+                <span class="rb-atlas-boss-symbol" aria-hidden="true">♛</span>
+                <div class="rb-atlas-sample-titles">
+                  <span class="rb-atlas-eyebrow" data-i18n="atlasCardLabel">ПРИКЛАД КАРТКИ РБ</span>
+                  <strong data-i18n="atlasBossName">Айнхалдер фон Хельман</strong>
+                  <small>Eilhalder von Hellmann</small>
+                </div>
+                <span class="rb-atlas-level">LV. 71</span>
+              </div>
+              <div class="rb-atlas-sample-rows">
+                <div><span data-i18n="atlasSampleLocationLabel">Локація</span><strong data-i18n="atlasSampleLocation">Прокляте село</strong></div>
+                <div><span data-i18n="atlasSampleTeleportLabel">Телепорт</span><strong>Rune → Forest of the Dead</strong></div>
+              </div>
+              <div class="rb-atlas-sample-footer" data-i18n="atlasSampleFooter">Фото боса · Маршрут · YouTube-гайд</div>
             </div>
           </div>
-          <a class="rb-guide-promo-link" href="http://138.68.66.8/map" target="_blank" rel="noopener noreferrer" data-i18n="guidePromoAction">Відкрити карту РБ ↗</a>
+          <div class="rb-atlas-info reveal delay-1">
+            <div class="rb-atlas-stat">
+              <span class="rb-atlas-stat-num">72<span> RB</span></span>
+              <div><strong data-i18n="atlasStatTitle">Інтерактивний довідник</strong>
+                <p data-i18n="atlasStatText">Картки рейд-босів відкриваються безпосередньо з маркерів на карті.</p></div>
+            </div>
+            <div class="rb-atlas-item">
+              <span class="rb-atlas-item-icon" aria-hidden="true">◉</span>
+              <div><strong data-i18n="atlasPhotoTitle">Реальні скриншоти з гри</strong>
+                <p data-i18n="atlasPhotoText">Зображення босів допомагають упізнати ціль. Для більшості карток додано авторські ігрові скриншоти.</p></div>
+            </div>
+            <div class="rb-atlas-item">
+              <span class="rb-atlas-item-icon" aria-hidden="true">⌖</span>
+              <div><strong data-i18n="atlasRouteTitle">Де шукати і куди ТП</strong>
+                <p data-i18n="atlasRouteText">Назви локацій, точка телепорту, напрямок руху та підказки до місця появи РБ.</p></div>
+            </div>
+            <div class="rb-atlas-item">
+              <span class="rb-atlas-item-icon" aria-hidden="true">▷</span>
+              <div><strong data-i18n="atlasVideoTitle">Відео та актуальні таймери</strong>
+                <p data-i18n="atlasVideoText">Відеогайди за наявності, пошук босів, статуси і синхронізація таймерів в одній карті.</p></div>
+            </div>
+            <div class="rb-atlas-actions">
+              <a class="btn btn-primary rb-atlas-cta" href="http://138.68.66.8/map" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="atlasCta">Відкрити карту РБ</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+              <p class="rb-atlas-access-note" data-i18n="atlasAccess">Доступ до карти — після входу через ліцензований лаунчер або прив'язаний телефон.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rb-architecture reveal" id="how-it-works-safely">
+          <div class="rb-architecture-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none"><path d="m24 4 17 7v12c0 11-7.4 17.3-17 21C14.4 40.3 7 34 7 23V11l17-7Z" stroke="currentColor" stroke-width="2"/><path d="m16 24 5.5 5.5L33 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <p class="rb-architecture-kicker" data-i18n="trustKicker">ПРИНЦИП РОБОТИ · OBS + OCR</p>
+            <h3 data-i18n="trustTitle">Зовнішній інформаційний монітор, не ігровий бот</h3>
+            <p data-i18n="trustText">За описаною архітектурою Yura RB Monitor розпізнає видимий системний чат із відеопотоку OBS та веде таймери без потреби читати пам’ять гри, вводити код у клієнт чи керувати персонажем. Водночас це не гарантія відсутності блокування: правила конкретного сервера й рішення античіта можуть відрізнятися.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -317,6 +388,10 @@
           <details>
             <summary data-i18n="faq4Q">Чи підтримуються різні сервери?</summary>
             <p data-i18n="faq4A">База фраз і босів налаштовується під сервер. Поточна версія орієнтована на High Five.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq5Q">Чи можливе блокування через античіт?</summary>
+            <p data-i18n="faq5A">Монітор працює через OBS + OCR, але правила конкретних серверів можуть відрізнятися.</p>
           </details>
         </div>
       </div>
