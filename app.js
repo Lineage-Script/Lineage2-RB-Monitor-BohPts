@@ -52,6 +52,14 @@ const translations = {
     atlasVideoText:"Відеогайди за наявності, пошук босів, статуси і синхронізація таймерів в одній карті.",
     atlasCta:"Відкрити карту РБ",
     atlasAccess:"Доступ до карти — після входу через ліцензований лаунчер або прив’язаний телефон.",
+    atlasChooseBoss:"ПЕРЕГЛЯНЬ КАРТКИ РБ",
+    atlasTabHellmann:"Хельман", atlasTabKelone:"Келона", atlasTabBehemoth:"Бехимос",
+    atlasBossKelone:"Відьма Келона", atlasBossBehemoth:"Глава Бехимосів", atlasLocationKelone:"Розпечені Топі",
+    atlasWalkHellmann:"З’являється лише вночі за ігровим часом. Від Forest of the Dead прямуй до Cursed Village.",
+    atlasWalkKelone:"Спустися до лавової низини, тримайся правого схилу та рухайся до місця появи боса.",
+    atlasWalkBehemoth:"На першому рівні Antharas Lair рухайся прямо, на розвилці праворуч, потім ліворуч через кістяний прохід.",
+    atlasShowcaseFoot:"Реальні ігрові скриншоти · 72 картки · RU / EN · маршрути · відео",
+    trustPillOne:"OBS / OCR зображення чату", trustPillTwo:"Без інжекції в клієнт", trustPillThree:"Без керування персонажем",
     trustKicker:"ПРИНЦИП РОБОТИ · OBS + OCR",
     trustTitle:"Зовнішній інформаційний монітор, не ігровий бот",
     trustText:"За описаною архітектурою Yura RB Monitor розпізнає видимий системний чат із відеопотоку OBS та веде таймери без потреби читати пам’ять гри, вводити код у клієнт чи керувати персонажем. Водночас це не гарантія відсутності блокування: правила конкретного сервера й рішення античіта можуть відрізнятися.",
@@ -127,6 +135,14 @@ const translations = {
     atlasVideoText:"Видеогайды при наличии, поиск боссов, статусы и синхронизация таймеров в одной карте.",
     atlasCta:"Открыть карту РБ",
     atlasAccess:"Доступ к карте — после входа через лицензированный лаунчер или привязанный телефон.",
+    atlasChooseBoss:"ПОСМОТРИ КАРТОЧКИ РБ",
+    atlasTabHellmann:"Хельман", atlasTabKelone:"Келона", atlasTabBehemoth:"Бехимос",
+    atlasBossKelone:"Ведьма Келона", atlasBossBehemoth:"Глава Бехимосов", atlasLocationKelone:"Раскалённые Топи",
+    atlasWalkHellmann:"Появляется только ночью по игровому времени. От Forest of the Dead двигайтесь к Cursed Village.",
+    atlasWalkKelone:"Спуститесь в лавовую низину, держитесь правого склона и двигайтесь к месту появления босса.",
+    atlasWalkBehemoth:"На первом уровне Antharas Lair двигайтесь прямо, на развилке направо, затем налево через костяной проход.",
+    atlasShowcaseFoot:"Реальные игровые скриншоты · 72 карточки · RU / EN · маршруты · видео",
+    trustPillOne:"OBS / OCR изображения чата", trustPillTwo:"Без инъекций в клиент", trustPillThree:"Без управления персонажем",
     trustKicker:"ПРИНЦИП РАБОТЫ · OBS + OCR",
     trustTitle:"Внешний информационный монитор, а не игровой бот",
     trustText:"Согласно описанной архитектуре Yura RB Monitor распознаёт видимый системный чат из видеопотока OBS и ведёт таймеры без необходимости читать память игры, внедрять код в клиент или управлять персонажем. Однако это не гарантия отсутствия блокировки: правила конкретного сервера и решения античита могут различаться.",
@@ -202,6 +218,14 @@ const translations = {
     atlasVideoText:"Video guides when available, boss search, statuses and synchronized timers on one map.",
     atlasCta:"Open raid boss map",
     atlasAccess:"Map access requires a signed-in licensed launcher or linked mobile browser.",
+    atlasChooseBoss:"EXPLORE RAID BOSS GUIDES",
+    atlasTabHellmann:"Hellmann", atlasTabKelone:"Kelone", atlasTabBehemoth:"Behemoth",
+    atlasBossKelone:"Kernon's Faithful Servant Kelone", atlasBossBehemoth:"Behemoth Leader", atlasLocationKelone:"Blazing Swamp",
+    atlasWalkHellmann:"Spawns only at night in game time. From Forest of the Dead, head to Cursed Village.",
+    atlasWalkKelone:"Descend into the lava basin, keep to the right slope and follow it to the boss spawn.",
+    atlasWalkBehemoth:"On the first level of Antharas Lair, head straight, then right at the fork and left through the bone passage.",
+    atlasShowcaseFoot:"Original in-game screenshots · 72 guides · RU / EN · routes · videos",
+    trustPillOne:"OBS / OCR chat recognition", trustPillTwo:"No game-client injection", trustPillThree:"No character control",
     trustKicker:"HOW IT WORKS · OBS + OCR",
     trustTitle:"An external information companion, not a gameplay bot",
     trustText:"As described, Yura RB Monitor reads visible system-chat video through OBS and OCR and tracks timers without needing to read game-process memory, inject code into the client or control a character. This does not guarantee protection from bans: individual server rules and anti-cheat decisions may differ.",
@@ -574,3 +598,35 @@ for (let i = 0; i < 26; i++) {
   s.style.width = s.style.height = `${1 + Math.random() * 2.4}px`;
   sparks.appendChild(s);
 }
+
+
+/* Accessible Raid Boss atlas tabs — read-only marketing preview, no game or Firebase access. */
+(function initRaidBossAtlas() {
+  const tabs = [...document.querySelectorAll('[data-rb-atlas-tab]')];
+  const panels = [...document.querySelectorAll('[data-rb-atlas-panel]')];
+  if (!tabs.length || tabs.length !== panels.length) return;
+  function activate(tab, moveFocus = false) {
+    const id = tab.dataset.rbAtlasTab;
+    for (const btn of tabs) {
+      const active = btn === tab;
+      btn.setAttribute("aria-selected", String(active));
+      btn.tabIndex = active ? 0 : -1;
+    }
+    for (const panel of panels) panel.hidden = panel.dataset.rbAtlasPanel !== id;
+    if (moveFocus) tab.focus();
+  }
+  for (const [index, tab] of tabs.entries()) {
+    tab.addEventListener("click", () => activate(tab));
+    tab.addEventListener("keydown", event => {
+      let next = index;
+      if (event.key === "ArrowRight") next = (index + 1) % tabs.length;
+      else if (event.key === "ArrowLeft") next = (index + tabs.length - 1) % tabs.length;
+      else if (event.key === "Home") next = 0;
+      else if (event.key === "End") next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      activate(tabs[next], true);
+    });
+  }
+  activate(tabs.find(tab => tab.getAttribute("aria-selected") === "true") || tabs[0]);
+})();
